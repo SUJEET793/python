@@ -1,0 +1,5661 @@
+﻿ScriptRunMode/Dev. Mode
+You can store code in a file and use the interpreter to execute the contents of the file, which is called a script. 
+Python scripts have names that end with .py Extension.
+
+Example:
+1. Goto IDLE, Select File and click on New or Ctrl+N (to Open New Window)
+2. Enter required python statements or commands
+
+print("Welcome to Script MODE")
+print('Welcome to Dev MODE')
+print("""It is a PYTHON Shelll""")
+print('''Good Bye...!!''')
+print(12345)
+
+3. Save with .py Extension @ desired location
+4. Hit the key F5 or Goto run menu click Run
+5. The out put displayed in readonly format on the IDLE
+6. Do required modifications in the saved file and re-run..!!
+
+PYTHON File Other Extensions:
+.py ==> Python File (Regular Scripts)
+.py3 ==> (rarely used) Python3 script
+.pyc==> This is the compiled bytecode/compiled scripts(Bytecode)
+.pyd ==> This is basically a windows dll file
+.pyo ==> This is optimized pyc file 
+.pyw==Python script for Windows
+.pyz ==> Python script archive (Compressed or Zip formated)
+
+SETTING PYTHON PATH IN Windows:
+Right click on My Computer ==>Properties ==> Advanced System Settings ==>Environment Variable ==>New
+In Variable name write path and in Variable value.
+>>> import os
+>>> os.getcwd() 
+Displays PYTHON Installed Path, copy path without quotes ==> Click Ok ==>Ok.
+
+Clear screen in Windows:
+There is no python builtin command for IDLE to clear the screen. We can perform through customized or userdefined commands..!!
+
+>>> print("\n"*20)#displaying blank lines
+>>> clear="\n"*20#Assign blank lines
+>>> print(clear)#displaying blank lines
+
+Working with Python in Unix & Linux Environments:
+Define Unix?
+Unix is a family of multitasking, multiuser computer operating systems. In Unix Python default installed, It is called standard PYTHON.
+
+$python ==> To open PYTHON prompt
+$python -v ==> To display verbose info
+$python --version ==> To display Version of PYTHON
+$man python ==> To display Manual Pages of PY
+
+In UNIX
+>>> CTRL + L #NoBlankLines, Clear the screen
+
+In Unix Python can be executed in two Run Modes:
+1. Interactive Run Mode ==> Command Mode
+2. Script Run Mode ==> Shell Mode or Dev Mode
+
+Execute a Python script  (Interactive Run Mode)
+$ python
+>>> print("Hello World!")
+>>> print "Hello World"
+>>> x=raw_input("Enter Any Number: ")
+>>> y=raw_input("Enter Any Number: ")
+>>> x+y
+>>> x=input("Enter Any Number: ")
+>>> y=input("Enter Any Number: ")
+>>> x+y
+>>> import os
+>>> os.getcwd()
+>>> import platform
+>>> platform.python_version()
+>>> import keyword
+>>> keyword.kwlist
+
+2. Script Run Mode:
+It is popularly known as Development mode.
+You can store code in a file and use the interpreter to execute the contents of the file, which is called a script
+
+What is Shebang?
+The term shebang refers to the "#!" located at the top of many script files that points to the path of the associated program.  It has the following alias Names:
+1. She-bang	2. Hashbang
+3. Pound-bang	4. Hash-pling
+5. Crunchbang....etc..!!
+
+$which command:
+It is used to display the path of interpreter or compiler, installed technology in UNIX.
+
+Syntax:
+$which <interpreter/compiler name>
+
+Example:
+$which python
+/usr/bin/python
+/ ==> root directory
+usr ==> Default Directory
+bin ==> Binary Directory
+python ==> Name of the interpreter
+Directory ==> Collection of sub-directories and files
+
+Editors in UNIX:
+Editor is a kind of ASCII formated file. It contains ANSI standard data like Alphabets, Numbers and Special Characters. These are text formated files. In UNIX there are different types editors are existed.
+1. QUED ==> QUick EDitor 
+2. FRED ==> FRiendly EDitor
+3. ED ==> standard EDitor
+4. EX ==> EXtended editor/Advanced Editor
+5. VI ==> VIsual editor
+6. VIM ==> Visually IMproved editor ..................!!
+
+The usage of #!/usr/bin/python plays a role if the script is executable, and called without the preceding language. 
+
+Example:
+$vi MyScript.py
+$ ==> Unix User Prompt/Primary Prompt
+# ==> Unix/Linux Admin/Super User Prompt
+Prompt ==> User Interface
+vi ==> Name of the Editor
+MyScript ==> Name of the file
+. ==> Embedded/Period character
+py ==> Extension of the file
+
+$vi MyScript.py ==> hit the return key (Enter)
+vi contains the following three modes:
+1. Command Mode: In this mode we can execute only shortcut keys.
+2.Insert Mode:In this mode we can write logical  statements.
+3. ExCommandMode: In this mode we can execute the required script(s) or logic(s).
+
+Example:
+#!/usr/bin/python
+print("Hello Welcome to PYTHON with Unix")
+print('It is standard PYTHON')
+print '''Good Bye'''
+print("Thank U")
+
+Hit the key Esc button, to convert into command mode. 
+hit the key :wq (Save and Exit)
+
+Executing PYTHON Script:
+$python MyScript.py (hit the return/enter key)
+Output displayed..!!
+
+INSIDE PYTHON
+After successful installation of Python, It is the combination of Interpreter and Support Library.
+
+Programmers View of Interpreter
+Interpreter is a software, which takes source code, reads it line by line and executes it line by line to produce the output.
+
+Inside INTERPRETER
+In Compiled languages are, compiler converts the source code into machine code or binary code, which is directly executed by the machine. In PYTHON compiler is using to convert the source code(.py) into byte code.(.pyc)
+
+What is Byte Code in PYTHON?
+Byte code is easily readable by PYTHON Virtual Machine and Source code easily understandable by programmers.
+1 Low Level
+2 Platform Independent
+3 Efficient
+4 Intermediate
+5 Representation of your source code
+
+PVM is read the byte code line by line and execute every line and produce output. In that process PVM uses all your Library Modules.
+
+What are PYC files?
+Python automatically compiles your script to compiled code, so called byte code, before running it. 
+__pycache__:
+It is a folder containing Python-3 byte-code compiled and ready to be executed.
+
+Example:
+import py_compile
+print(dir(py_compile))
+
+Example:
+import compileall
+print(dir(compileall))
+
+Example:
+import py_compile
+py_compile.compile("MyScript.py")
+
+Steps to Work with PYTHON INSIDE:
+1. Create a Folder/Directory on the Desktop ( or in AnyLocation)
+2. Create a py file in that folder
+3. Go to command prompt, change to current Folder/Dir location
+4. python and hit the return key
+5. import py_compile
+6.py_compile.compile("filename.py")
+7. __pycache__ folder created automatically with byte code
+8. cd __pycache__
+9. python file.cpython-38.pyc, to execute byte code directly without source code
+
+PYTHON RealTime IDEs
+Define IDE?
+Integrated Development Environment is a software application, that provides comprehensive facilities to computer programmers for software development. 
+
+What is PyCharm?
+It is the best IDE for realtime PYTHON projects. It provides code analysis, a graphical debugger, an integrated unit tester and supports web development with Django framework. 
+
+PyCharm Come in two editions:
+1 Community Edition (Fully-Free)
+2 Professional Edition (Commercial-$199)
+
+PyCharm IDE Installation:
+1 Go to https://www.jetbrains.com/pycharm/download
+OR
+2 https://www.jetbrains.com/pycharm/promo/anaconda/
+3 Install any Edition Community or Professional
+4 It is cross-platform and works on Windows, macOS, and Linux.
+
+PyCharm IDE Features List:
+1 Intelligent Coding Assistance
+2 Built-in Developer Tools
+3 Web Development
+4 Scientific Tools
+
+Components of Pycharm:
+It has maily the following Components:
+1. Menu or Dashboard
+2. Project Panel
+3. Code Editor
+4. Console or Output Window
+
+How to create a project:
+1. Goto file menu, click on New project, Enter name of the Project PYTHON_4PM
+2. Select Current window
+3. Right click on the project select Python file, enter name of the file.
+4. Enter required python source code as follows
+
+Example:
+print("Hello Welcome to PYCHARM")
+x=input("Enter any Number: ")
+print(x)
+import os
+print(os.getcwd())
+import sys
+print(sys.platform)
+print(sys.path)
+import platform
+print(platform.python_version())
+import  keyword
+print(keyword.kwlist)
+
+To run the code Ctrl+Shift+F10
+
+Creating html files:
+Right click on created project, select html file, enter required file name, click on ok.
+
+Example:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naresh i Technologies</title>
+</head>
+<body>
+<h1 style="color:red;font-family:candara;text-decoration:line-through">Welcome to PYTHON Django Environment </h1>
+<h3>It is PYTHON Web Framework..!!</h3>
+<marquee>
+<img src="https://www.google.co.in/images/branding/googlelogo.png" width="100px" height="100px"/>
+</marquee>
+</body>
+</html>
+
+Debugging in PYCHARM:
+It is the process of identifying and fixing problems in Code. The following short-cut keys are required to debug..!!
+1 Step Over (F8)
+2 Step Into (F7)
+3 Force Step Into (Alt+Shift+F7)
+4 Step Out (Shift+F8)
+5 Run to Cursor (Alt+F9)
+
+Example:
+a=int(input("Enter Any Number: "))
+b=int(input("Enter Any Number: "))
+c=a+b
+print("The Result is: ",c)
+d=a-b
+print("The Result is: ",d)
+e=a*b
+print("The Result is: ",e)
+f=a/b
+print("The Result is: ",f)
+
+
+What is Anaconda?
+The Most Popular Python Data Science Platform.
+It is a freemium open source distribution of the Python and R PLs for large-scale data processing, predictive analytics and scientific computing. 
+
+How to Install Anaconda?
+1. https://www.anaconda.com/download/
+2. Click on Python 3.7 version 64-Bit Installer download
+3. After successful Installation of Anaconda Platform
+4. Go to MSDOS Command Prompt type spyder or jupyter notebook 
+5. SPYDER(Scientific PYthon Development EnviRonment) 
+6. JUPYteR (formerly==>iPython(JUlia, PYthon and R)
+
+Coding Environments
+Anaconda comes with two popular IDEs :
+
+Spyder:
+It is a powerful IDE for the Python language with advanced editing, interactive testing, debugging features..!!
+
+General features:
+1. iPython=>Enhanced interactive Python interpreter
+2. NumPy =>Nummerical PYthon-Linear Algebra 
+3. SciPy=>Scientific Python-Signal & Image Processing 
+4. Matplotlib=>Interactive 2D/3D plotting
+5. Pandas=>For Data Analysis with Data Frames
+6. Scikit-learn==> It is a Machine Learning library
+
+Spyder Shortcut Keys
+1  Press F5 to run the entire script
+2  Press F9 to run selection line 
+3  Press Ctrl + 1 to comment / uncomment
+4  Ctrl+Enter executes the current cell.
+
+Main Components in Spyder.
+1 Dashboard	2 Project Explorer
+3 Editor		4 Console		5 Help
+
+What is Anaconda Navigator?
+It is a desktop GUI, that allows you to launch applications and easily manage conda packages without using command-line commands.
+
+Jupyter Notebook:(http://jupyter.org/) 
+Formerly known as the IPython Notebook. It is a server-client application that allows editing and running notebook documents via a web browser. 
+
+Features of Jupyter Notebook:
+1 Edit/Run code in the browser
+2 It supports 40+ Programming Languages
+3 Share notebooks: using email, Dropbox, GitHub
+4 BigData Integration
+
+Example: (Plotting Examle)
+import matplotlib.pyplot as plt
+x=[1,2,3,4,5,10,11,12,30,31,89]
+plt.plot(x,'bo-')
+plt.xlabel("Time")
+plt.ylabel("Price")
+plt.show()
+
+Define Conda?
+It is an open source package management system and environment management system for installing multiple versions of software packages.
+
+Goto Ancondata Prompt and do the follwing:
+$conda update conda
+$conda install numpy
+$conda help
+$conda help config
+$conda help info
+
+What is pip
+It is a package manager for Python programming language. 
+
+Installation
+$python get-pip.py
+
+Syntax:
+pip list [options]
+
+Upgrading pip: UNIX:
+$pip install -U pip
+
+pip Commands:
+$pip list	$pip help	    $pip help install
+$pip search django	    $pip install pympler
+$pip uninstall django    $pip show django
+$pip download django $pip install virtualenv
+https://pip.pypa.io/en/stable/reference/
+
+What is PyDev?
+PyDev is a Python IDE for Eclipse, which may be used in Python, Jython and IronPython development. http://www.pydev.org/
+
+Define RODEO?
+A Native Python IDE for Data Science
+https://rodeo.yhat.com/
+
+FAQs on Pre Core PYTHON:
+1. Define Scripting?
+2. Types of Scripts?
+3. Diff between Programming Langs and Scripting Langs
+4. Why Script?
+5. Features and Limitation of Scripting?
+6. Why script is Smart Programming?
+7. What is Paradigm?
+8. Define PYTHON?
+9. Any Five features of PYTHON
+10. Why Python is General Purpose programming?
+11. Is Python complete language?
+12. How and Who developed Python?
+13. Python in Realtime?
+14. Any Five Python Libs?
+15. IDLE stands for
+16. Name of the PYTHON Prompt?
+17. How to clear screen in IDLE?
+18. print() detailed syntax?
+19. List any 10 PYTHON Keywords
+20. How to display PYTHON version?
+21. Single Lone Under score
+22. How to Join lines in PYTHON?
+23. What are the quotes in PYTHON?
+24. How to configure shorcut keys in IDLE?
+25. Write Comment notation?
+26. PYTHON Interpreter Architecture?
+27. How PYTHON generates ByteCode?
+28. Write any five PYTHON file Extensions
+29 What is Shell in PYTHON?
+30 Define statement, command, os?
+31. define IDE?
+32. Define PYCHARM?
+33. How to debug py script in PYCHARM?
+34. Define Anaconda, Conda and Miniconda?
+35. What is Spyder?
+36. Write any three features of Spyder?
+37. Why Jupyter Notebook?
+38. What is Conda Lib?
+39. How to use PiP?
+40. Write any five PiP Commands?
+
+
+Type Conversion or Type Casting:
+Since Python is dynamically-typed, you may want to convert a value into another type. Every value in Python has a data type. 
+
+Python Explicit Data Type Conversion
+Primitive Data Structures:
+Integers	Float	Strings	Boolean
+Non-Primitive Data Structures:
+Lists	Tuples	 Sets 	Dictionary
+
+List of PYTHON Functions
+1 int(x [,base])	2 bool()	3 float(x)		
+4 str(x)		5 list(s)	6 tuple(s)		
+7 set(s)		8 dict(d)	9 ord(x)		
+10 chr(x)		11 complex(real,img)		
+12 eval()
+
+int(x [,base]): 
+It converts a number in given base to decimal.
+
+Syntax:
+int(string, base)
+
+Parameter :
+string : consists of 1's and 0's
+base : (integer value) base of the number.
+
+Example:
+print(int(123))
+print(int(123.098))
+print(int(123.001))
+
+Example:
+print(int("1010",2))#10
+print(int("1110",2))#14
+print(int("1111",2))#15
+
+Example:
+print(int("12",8))#10
+print(int("123",8))#83
+print(int("34",8))#28
+
+Example:
+print(int("19",16))#25
+print(int("4f",16))#79
+print(int("98",16))#152
+
+NOTE:
+ValueError: int() base must be >= 2 and <= 36, or 0
+
+Example:
+print(int("111",2))#7
+print(int("111",3))#13
+print(int("111",4))#21
+print(int("111",5))#31
+
+bool()		
+It converts the value into a boolean.
+
+Syntax:
+bool(value)
+
+The following values are considered false in Python:
+    None	    
+    False
+    Zero of any numeric type. For example, 0, 0.0, 0j
+    Empty sequence. For example, (), [], ''.
+    Empty mapping. For example, {}
+
+NOTE: All other values except these values are considered true
+
+Example:
+print(bool([])); print(bool(['a value']))
+print(bool('')); print(bool('A string'))
+print(bool(True)); print(bool(False))
+print(bool(0)); print(bool(None))
+print(bool(0.0)); print(bool(1))
+
+float(x): To convert x to a floating-point number.
+
+Syntax:
+float(value)
+
+Example:
+a=100
+print(float(a))
+
+NOTE: 
+We can convert any value to float type except complex type.
+
+str() : It is Used to convert integer into a string.
+
+Syntax:
+str(value)
+
+Example:
+a=100
+print(type(a)) #<class 'int'>
+print(str(a))
+print(type(a)) #<class 'str'>
+
+NOTE:
+If we want to convert str type to int type, string must contain only integral value.
+
+list() : 
+It is used to convert any data type to a list type.
+
+Syntax:
+list(items)
+
+Example:
+MyStr="PYTHON"
+print(type(MyStr))
+MyList=list(MyStr)
+print(type(MyList))
+print(MyList)
+
+tuple() : It is used to convert to a tuple.
+
+Syntax:
+tuple(items)
+
+Example:
+MyStr="PYTHON"
+print(type(MyStr))
+MyTuple=tuple(MyStr)
+print(type(MyTuple))
+print(MyTuple)
+
+set() : 
+It returns the type after converting to set
+
+Syntax:
+set(items)
+
+Example:
+MyStr="PYTHON"
+print(type(MyStr))
+MySet=set(MyStr)
+print(type(MySet))
+print(MySet)
+
+dict() : 
+It is used to convert a tuple of order (key,value) into a dictionary.
+
+Syntax:
+dict(key,value)
+
+Example:
+MyTup=(('a',1),('b',2),('c',3))
+print(type(MyTup))
+MyDict=dict(MyTup)
+print(type(MyDict))
+print(MyDict)
+
+ord() : 
+It is used to convert a character to integer.
+
+Syntax:
+ord('Char')
+
+Example:
+MyChar='A'
+print(ord(MyChar))#65
+
+Example:
+Example:
+print(ord('स'))#2360
+print(ord('ल'))#2354
+print(ord('గ'))#3095
+print(ord('ف'))#1601
+
+chr(i)
+Return the string representing a character whose Unicode code point is the integer i.
+
+Syntax:
+chr('number')
+
+Example:
+print(chr(65))#A
+print(chr(90))#Z
+print(chr(32))# 
+print(chr(49))#1
+print(chr(123))#{
+
+Example:
+print(chr(2360))#स
+print(chr(2354))#ल
+print(chr(3095))#గ
+print(chr(1601))#
+
+
+Mnemonic Variable Names
+This can confuse beginning students because well-named variables often “sound” so good.
+
+Example:
+x1q3z9ocd = 35.0 
+x1q3z9afd = 12.50
+x1q3p9afd = x1q3z9ocd * x1q3z9afd
+print(x1q3p9afd)
+
+Example:
+a = 35.0;b = 12.50 
+c = a * b;print(c)
+
+Writing numbers in Binary, Octal & HexaDecimal
+Number System	Prefix
+Binary		0b or 0B
+Octal		0o or 0O
+Hexadecimal	0x or 0X
+
+Binary literals (base 2)
+Binary literals can easily be written as well. They have to be prefixed by a leading "0", followed by a "b" or "B":
+
+Syntax:
+bin(number)
+
+Example:
+x = 0b101010 
+print(x )
+
+Example
+x = bin(65)
+print(x)
+
+Octal literals (base 8)
+A number prefixed by 0o (zero and a lowercase "o" or uppercase "O") will be interpreted as an octal number
+
+Syntax:
+oct(number)
+
+Example:
+a = 0o10
+print(a)
+
+Example
+x = oct(65)
+print(x)
+
+Hexadecimal literals (base 16)
+Hexadecimal literals have to be prefixed either by "0x" or "0X". (Zero followed by x or X)
+
+Syntax:
+hex(number)
+
+Decimal ==> 0-9 (10)
+Hexa ==> 6 ==> A/a =>10, B/b =>11, C/c =>12
+D/d =>13, E/e =>14, F/f =>15 (6)
+Hexa+Decimal=6+10=16
+
+Example:
+x = hex(19)
+print(x)
+
+Example:
+x = hex(64)
+print(x)
+
+Example:Output of the following SCRIPT:
+x=10;y=0o10;z=0X10 
+print(x);print(y);print(z)
+a=0XAB;print(a) 
+
+None Data Type:
+The None keyword is used to define a null value, or no value at all. If the value is not available,then to handle such type of cases None introduced.
+
+Example:
+PySpe=None
+print(type(PySpe))#<class 'NoneType'>
+print(PySpe)#None
+
+Order of Operations
+When an expression contains more than one operator, the order of evaluation depends on the order of operations. For mathematical operators, Python follows mathematical convention. The acronym PEMDAS is a useful way.
+
+PEMDAS
+Parentheses Exponentiation Multiplication Division Addition Subtraction
+
+Parentheses
+2 * (3-1) ==> 4
+(1+1)**(5-2) ==> 8
+
+Exponentiation 
+1 + 2**3 ==> 9, not 27, 
+2 * 3**2 ==> 18, not 36.
+
+Multiplication and Division have higher precedence than Addition and Subtraction. 
+2*3-1 ==> 5, not 4, 
+6+4/2 ==> 8, not 5.
+
+Pdb Module (Python Debugger)
+pdb is a debugging tool that is part of python’s standard library. It is an interactive source code debugger for Python programs. Using pdb, we can set breakpoints at any point of our program to stop it and check for errors or the status of our running program.
+
+Syntax:
+import pdb; 
+pdb.set_trace()
+
+Example:
+import pdb
+print(dir(pdb))
+
+PDB Options:
+ l (list) - Display 11 lines around the current line.
+ r (return) - Continue execution until the current function returns.
+ b (break) - Set a breakpoint (depending on the argument provided).
+ n (next) - Continue execution until the next line in the current function is reached.
+ s (step) - Execute the current line, stop at the first possible occasion.
+ j (jump) - Jump to the next line to be executed.
+ c (continue) - Creates a breakpoint in the program execution.
+q (quit)   Quit from the debugger. The program being executed is aborted.
+
+Open run command, enter cmd
+C:\cd desktop
+C:\desktop\ notepad Hello.py
+write required Python script, save it..!!
+C:\desktop\python Hello.py
+C:\desktop\python -m pdb Hello.py
+> the prompt of the debugger
+(pdb) l
+List the lines of code..!!
+ 
+
+5th sessn class 
+
+complex : This function converts real numbers to complex number.
+
+Syntax:
+complex(real,imag) 
+
+Example:
+a=1
+print(type(a))#<class 'int'>
+print(a)#1
+b=complex(a)
+print(type(b))#<class 'complex'>
+print(b)#(1+0j)
+
+Example:Output of the following Script
+a=complex(1,2)
+b=complex(2,3)
+c=a+b;print(c)
+d=a-b;print(d)
+
+Example:Output of the following Script
+print(complex(20))
+print(complex(10.5))
+print(complex(True))
+print(complex(False))
+print(complex("10"))
+print(complex("10.5"))
+
+Example:Output of the following Script
+print(complex(True,False))
+print(complex(1,-2))
+print(complex(1,-0))
+
+String Formatting in Python:
+In Python a string of required formatting can be achieved by different methods.
+1) Using %		
+2) Using {}		
+3) Using Template Strings
+
+Using %:  The formatting using % is similar to that of ‘printf’ in C programming language.
+%d ==> integer
+%f ==> float
+%s  ==> string
+%x ==> hexadecimal
+%o ==> octal
+
+Syntax:
+print("formatted string" %(variable list)) 
+
+Example:
+print("%s having %s Years Experience in IT." %("KSRAJU","15+"))
+print("%s having %d Years Experience in IT." %("KSRAJU",15))
+
+Example:
+name = "RaaJ"
+
+print("Hello, %s!" % name)
+
+Example:
+name = "RaaJ"
+
+age = 23
+
+print("%s is %d years old." % (name, age))
+
+Example:
+a=10; b=20; c=30
+print("a value is %i" %a)
+print("b value is %d and c value is %d" %(b,c))
+
+Formatting Strings:
+We can format strings with variable values by using replacement operator {} and format() method.
+
+Syntax:
+{ } .format(value)
+
+value :
+Can be an integer, floating point numeric constant, string, characters or even variables.
+
+Example:
+name='python'
+print("Hello {}".format(name))
+
+Syntax : 
+{ } { } .format(value1, value2)
+
+Example:
+name='ksraju';dept='Software'
+print("Hello {} You are {} department".format(name,dept))
+
+Syntax : 
+{ } { } { } .format(value1, value2,value3)
+
+Example:
+PyName='SMITH';PySal="$10000";PyLoc="HYDERABAD"
+print("{}'s Sal is: {} & His Loc is: {}".format(PyName,PySal,PyLoc))
+print("{0}'s Sal is: {1} & His Loc is: {2}".format(PyName,PySal,PyLoc))
+
+What is Indentation:
+Indent or indentation is the increase or decrease of space between the left and right margin of a paragraph. But in Python, it is required for indicating, what block of code a statement belongs to. 
+
+1 Increase indent after an if statement or for statement (after : )
+2 Maintain indent to indicate the scope of the block
+3 Blank lines are ignored - they do not affect indentation
+4 Comments on a line by themselves are ignored with regard to indentation
+
+Example:
+if True:
+    print("True")
+else:
+    print("False")
+
+Python Libraries:
+A Python library is a reusable chunk of code that you may want to include in your programs/ projects. A 'library' loosely describes a collection of core modules. 
+
+Python Math Libraries:
+Python offers libraries like math, numpy, scipy, statsmodel, sklearn and random to carry out different mathematics like trigonometry, logarithms, probability and statistics etc.!
+
+Common variables in math module:
+pi==> 3.14
+e==>2.71
+inf ==>infinity
+nan ==>not a number
+
+Python Number abs() Function:
+It returns absolute value of x - the (positive) distance between x and zero.
+
+Syntax
+abs( x )
+
+Example:
+print(abs(-45))
+print(abs(100.12))
+
+ceil() Method:
+It returns ceiling value of x - the smallest integer not less than x.
+
+Syntax
+math.ceil( x )
+
+EXAMPLE:
+import math 
+print(math.ceil(-45.17))
+print (math.ceil(100.12))
+print (math.ceil(100.72))
+
+Python Number floor() Method
+It returns floor of x - the largest integer not greater than x.
+
+Syntax
+math.floor( x )
+
+Example:
+import math 
+print(math.floor(-45.17))
+print(math.floor(100.12))
+print(math.floor(100.72))
+
+math.fabs(x)
+Return the absolute value of x.
+
+Syntax:
+math.fabs(x)
+
+Example:
+import math
+print(math.fabs(-10.99))
+print(math.fabs(10.99))
+print(math.fabs(-100.01))
+
+math.factorial(x)
+Return x factorial. Raises ValueError if x is not integral or is negative.
+
+Syntax:
+math.factorial(x)
+
+Example:
+import math
+print(math.factorial(5))
+
+math.fsum(iterable)
+Return an accurate floating point sum of values in the iterable. 
+
+Syntax:
+math.fsum()
+
+Example:
+import math
+print(math.fsum([5,7,2,4]))
+print(math.fsum({5,7,2,4}))
+print(math.fsum((5,7,2,4)))
+
+pow() Method: This method returns value of x to the power of y.
+
+Syntax:
+math.pow(x,y)
+
+Example:
+import math 
+print(math.pow(100, 2))
+print(math.pow(2, 4))
+print(math.pow(3, 0))
+
+Python Number round() Function
+It returns x rounded to n digits from the decimal point.
+
+Syntax
+round( x [, n]  )
+
+Example:
+print(round(10.234,2))#10.23
+print(round(10.236,2))#10.24
+print(round(10.236,3))#10.236
+print(round(10.990,1))#11.0
+print(round(80.23456, 2))
+print(round(100.5623, 3))
+
+sqrt() Method
+It returns the square root of x for x > 0.
+	
+Syntax
+math.sqrt( x )
+
+Example:
+import math 
+print(math.sqrt(100))
+print(math.sqrt(7))
+
+Working with Random Numbers in Python
+The random.random() method returns a random float in the interval [0.0, 1.0). This means the returned random number will always be smaller than the right-hand endpoint (1.0). This is also known as a semi-open range.
+
+Syntax:
+random.random()
+
+Example:
+import random
+print(random.random())
+print(random.random())
+
+Generating Random Ints Between x and y
+This is how you can generate a random integer between two endpoints in Python with the random.randint() function. This spans the full [x, y] interval and may include both endpoints:
+
+Syntax:
+random.randint(x,y)
+
+Example:
+import random
+print(random.randint(1,10))
+print(random.randint(1,10))
+
+randrange():
+This function you can exclude the right-hand side of the interval, meaning the generated number always lies within [x, y) and it will always be smaller than the right endpoint:
+
+Syntax:
+random.randrange(x,y)
+
+Example:
+import random
+print(random.randrange(1,10))
+print(random.randrange(1,10))
+
+Generating Random Floats Between x and y
+If you need to generate random float numbers that lie within a specifc [x, y] interval you can use the random.uniform function:
+
+Syntax:
+random.uniform(x,y)
+
+Example:
+import random
+print(random.uniform(1,20))
+print(random.uniform(1,20))
+
+Picking a Random Element From a List
+To pick a random element from a non-empty sequence (like a list or a tuple) you can use Python’s random.choice function:
+
+Syntax:
+random.choice(seq)
+
+Example:
+import random
+x=[1,2,3,4,5]
+print(random.choice(x))#1
+print(random.choice(x))#3
+print(random.choice(x))#5
+
+Example:
+import random
+items=[1,2,3,4,5,6,7]
+print(random.choice(items))
+print(random.choice(items))
+print(random.choice(items))
+
+Example:
+for i in items:
+    print(random.choice(items))
+
+Randomizing a List of Elements
+You can randomize a sequence in place using the random.shuffle function. This will modify the sequence object and randomize the order of elements:
+
+Syntax:
+random.shuffle(x)
+
+Example:
+import random
+items=[1,2,3,4,5,6,7]
+print(items)
+random.shuffle(items)
+print(items)
+
+Picking n Random Samples From a List of Elements
+To pick a random sample of n unique elements from a sequence, use the  random.sample function. It performs random sampling without replacement:
+
+Syntax:
+random.sample(population,k)
+
+Example:
+import random
+items=[1,2,3,4,5,6,7]
+print(items)
+print(random.sample(items,3))
+print(random.sample(items,3))
+print(random.sample(items,3))
+
+Generating Cryptographically Secure Random Numbers
+If you need cryptographically secure random numbers for security purposes, use  random.SystemRandom which uses a cryptographically secure pseudo-random number generator.
+
+Example:
+import random
+rand_gen=random.SystemRandom()
+print(rand_gen.random())
+print(rand_gen.randint(1,10))
+print(rand_gen.randrange(1,10))
+print(rand_gen.uniform(1,10))
+print(rand_gen.choice('abcedef'))
+
+The secrets Module:
+It is used for generating cryptographically strong random numbers suitable for managing data such as passwords, account authentication, security tokens, and related secrets.
+
+secrets.token_bytes([nbytes=None])
+Return a random byte string containing nbytes number of bytes. 
+
+secrets.token_hex([nbytes=None])
+Return a random text string, in hexadecimal. The string has nbytes random bytes, each byte converted to two hex digits. 
+
+secrets.token_urlsafe([nbytes=None])
+Return a random URL-safe text string, containing nbytes random bytes.
+
+secrets.randbelow(n)
+Return a random int in the range ( n).
+
+Example:
+import secrets
+print(secrets.token_bytes(16))
+print(secrets.token_hex(16))
+print(secrets.token_urlsafe(16))
+print(secrets.choice('abcedef'))
+print(secrets.compare_digest('12','134'))
+print(secrets.compare_digest('12','12'))
+
+day 6 motes 
+
+
+WORKING WITH PYTHON OPERTAORS
+An operator is a character that represents an action. Python Supports different types of Operators:
+
+1 Arithmetical Operators
+2 Comparison (Relational) Operators
+3 Assignment Operators
+4 Logical Operators
+5 Membership Operators
+6 Identity Operators
+7 Bitwise Operators
+8 Ternary Operator
+
+Python Arithmetical Operators:
++ Addition, - Subtraction, * Multiplication
+/ Division, % Modulus, ** Exponent, //Floor division
+
+Example:
+x = 15
+y = 4
+print('x + y =',x+y)
+print('x - y =',x-y)
+print('x * y =',x*y)
+print('x / y =',x/y)
+print('x // y =',x//y)
+print('x ** y =',x**y)
+
+Example:
+x=int(input("Enter Any Number: "))
+y=int(input("Enter Any Number: "))
+z=x+y
+print("Sum is: ",z)
+z=x-y
+print("Diff is: ",z)
+z=x*y
+print("Product is: ",z)
+z=x/y
+print("Div is: ",z)
+z=x%y
+print("Mod is: ",z)
+z=x**y
+print("Expo is: ",z)
+z=x//y
+print("Fdiv is: ",z)
+
+Python Comparison Operators
+These operators are used to compare values. They are also called Relational operators.
+
+==, !=, >, <, >=, <=	
+
+Example:
+A=1;B=2
+print(A==B)#False
+print(A!=B)#True
+print(A<B)#True
+print(A>B)#False
+print(A<=B)#True
+print(A>=B)#False
+
+Python Assignment Operators
+=, +=, -=, *=, /=, %= , **=, //= 
+
+Example:
+a=int(input("Enter Any Number: "))
+b=int(input("Enter Any Number: "))
+c = 0
+c=a+b
+print("The Result is: ",c)
+c+=a#c=c+a
+print("The Result is: ",c)
+c*=a#c=c*a
+print("The Result is: ",c)
+c/=a#c=c/a
+print("The Result is: ",c)
+c=2
+c%=a#c=c%a
+print("The Result is: ",c)
+c**=a #c=c^a
+print("The Result is: ",c)
+c//=a #c=c//a
+print("The Result is: ",c)
+
+
+Python Logical(Boolean) Operators
+Python supports the following list of logical Operators:
+
+Operator	Description
+and 	If both the operands are true then condition becomes true.
+or 	If any of the two operands are non-zero then condition becomes true.
+not 	Used to reverse the logical state of its operand.
+
+Example:
+x = True; y = False
+print(x and y)
+print(x or y)
+print(not x)
+
+Python Special Operators:
+Python Scripting Language offers two types of Special Operators:
+1. Membership operators	2. Identity operators
+
+Python Membership Operators
+They are used to test whether a value or variable is found in a sequence (string, list, tuple, set and dictionary).
+
+NOTE: In a dictionary we can only test for presence of key, not the value.
+
+Operator	Meaning					
+in	True if value/variable is found in the sequence
+not in	True if value/variable is not found in the sequence
+
+Example:
+x = 'Hello world'
+y = {1:'a',2:'b'}
+print('H' in x)
+print('hello' not in x)
+print(1 in y)
+print('a' in y)
+
+Python Identity Operators
+They are used to check if two values (or variables) are located on the same part of the memory. Identity operators compare the memory locations of two objects.
+
+Operator	Meaning					
+is	True if the operands are identical 
+is not	True if the operands are not idenical
+
+Example:
+a = b = [1,2,3]
+c = [1,2,3]
+print( a is b)
+print( a is c)
+
+Difference between "is" vs "=="
+The is operator may seem like the same as the equality operator but they are not same. The is checks if both the variables point to the same object whereas the == sign checks if the values for the two variables are the same.
+
+Example:
+a=[1,2,3];b=a;print(b)
+print(a is b);print(a == b)
+c=list(a);print(c)
+print(a is c);print(a == c)
+
+id() function:
+It is used to return the identity of an object
+
+Syntax:
+id(object)
+
+Example:
+a=[1,2,3]
+print(id(a))#72563690248
+b=a
+print(id(b))#72563690248
+print(b)#[1,2,3]
+print(a is b)#True
+print(a==b)#True
+
+NOTE:
+Avoid using 'is' operator for immutable types such as strings and numbers, the result is unpredictable
+
+Python Bitwise Operators   
+These are used to perform bit operations. All the decimal values will be converted into binary values and bitwise operators will work on these bits.
+
+OPERATOR	MEANING		
+&		Bitwise AND		
+|		Bitwise OR		
+^		Bitwise exclusive OR	
+~		Bitwise complement		
+<<		Shift left			
+>>		Shift right	
+
+bitwise AND (&)
+It compares each bit of the first operand to the corresponding bit of the second operand. If both bits are 1, the corresponding result bit is set to 1.
+
+Example:
+a=10;b=20
+
+ANALYSIS
+We declared 2 integers a and b, The binary form of 
+10 = 00001010 ==> for 1 Byte ==> 8 bits
+20 = 00010100 ==> for 1 Byte ==> 8 bits
+00001010 & 00010100 ==> 0000 0000=> Result is 0
+
+Example:
+a=10;b=20
+print(a&b)#0
+
+Example:
+a=10;b=20
+print(bin(a))#0b1010
+print(bin(b))#0b10100
+#0000 1010 & 0001 0100
+print(0b00000000)#0
+print(a&b)#0
+
+Example:
+a=9;b=65
+print(bin(a))#0b1001
+print(bin(b))#0b1000001
+#0000 1001 & 0100 0001
+print(0b00000001)#1
+print(a&b)#1
+
+bitwise OR
+It takes two bit patterns of equal length. The result in each position is 0 if both bits are 0, while otherwise the result is 1 (Any One 1 the Result is 1)
+
+Bitwise OR Operation = a | b
+a = 9;b = 65
+00001001 | 01000001 = 01001001 = 73
+
+Example:
+a = 9;b = 65
+print(a | b)#73
+
+Example:
+a=9;b=65
+print(bin(a))#0b1001
+print(bin(b))#0b1000001
+#0000 1001 | 0100 0001
+#01001001
+print(a|b)#73
+print(0b1001001)#73
+
+The bitwise exclusive OR operator (^) :
+It compares each bit of its first operand to the corresponding bit of its second operand. If one bit is 0 and the other bit is 1, the corresponding result bit is set to 1. Otherwise, the corresponding result bit is set to 0. (Identical is 0)
+
+Bitwise Exclusive OR Operation = a ^ b
+00001001 ^ 01000001 = 01001000 = 72
+
+Example:
+a = 9;b = 65
+print(a ^ b)#72
+
+EXAMPLE:
+a=9;b=65
+print(bin(a))#0b0000 1001
+print(bin(b))#0b0100 0001
+#0000 1001 ^ 0100 0001
+#0100 1000
+print(0b01001000)#72
+print(a^b)#72
+
+EXAMPLE:
+print(True & False)
+print(True | False)
+print(True ^ False)
+
+day 7 notes
+
+
+bitwise AND (&)
+It compares each bit of the first operand to the corresponding bit of the second operand. If both bits are 1, the corresponding result bit is set to 1.
+
+Example:
+a=10;b=20
+
+ANALYSIS
+We declared 2 integers a and b, The binary form of 
+10 = 00001010 ==> for 1 Byte ==> 8 bits
+20 = 00010100 ==> for 1 Byte ==> 8 bits
+00001010 & 00010100 ==> 0000 0000=> Result is 0
+
+Example:
+a=10;b=20
+print(a&b)#0
+
+Example:
+a=10;b=20
+print(bin(a))#0b1010
+print(bin(b))#0b10100
+#0000 1010 & 0001 0100
+print(0b00000000)#0
+print(a&b)#0
+
+Example:
+a=9;b=65
+print(bin(a))#0b1001
+print(bin(b))#0b1000001
+#0000 1001 & 0100 0001
+print(0b00000001)#1
+print(a&b)#1
+
+bitwise OR
+It takes two bit patterns of equal length. The result in each position is 0 if both bits are 0, while otherwise the result is 1 (Any One 1 the Result is 1)
+
+Bitwise OR Operation = a | b
+a = 9;b = 65
+00001001 | 01000001 = 01001001 = 73
+
+Example:
+a = 9;b = 65
+print(a | b)#73
+
+Example:
+a=9;b=65
+print(bin(a))#0b1001
+print(bin(b))#0b1000001
+#0000 1001 | 0100 0001
+#01001001
+print(a|b)#73
+print(0b1001001)#73
+
+The bitwise exclusive OR operator (^) :
+It compares each bit of its first operand to the corresponding bit of its second operand. If one bit is 0 and the other bit is 1, the corresponding result bit is set to 1. Otherwise, the corresponding result bit is set to 0. (Identical is 0)
+
+Bitwise Exclusive OR Operation = a ^ b
+00001001 ^ 01000001 = 01001000 = 72
+
+Example:
+a = 9;b = 65
+print(a ^ b)#72
+
+EXAMPLE:
+a=9;b=65
+print(bin(a))#0b0000 1001
+print(bin(b))#0b0100 0001
+#0000 1001 ^ 0100 0001
+#0100 1000
+print(0b01001000)#72
+print(a^b)#72
+
+EXAMPLE:
+print(True & False)
+print(True | False)
+print(True ^ False)
+
+Binary Ones Complement 
+It is unary and has the effect of 'flipping' bits. Given number should be convert into binary number. That binary number converting '0' to '1' and '1' to '0' is called Binary Ones Complement.
+
+In Mathematical Approach:
+x=10 ==> 0000 1010 (is Binary Number)
+Binary Ones Complement is ==> 1111 0101
+
+Binary Twos Complement:
+Add '1' to Binary Ones Complement is called Binary Twos Complement.
+1111 0101
+           +1
+-------------
+1111 0110
+------------
+
+Binary Ones Complement in PYTHON Solution:
+It is unary and has the effect of 'flipping' bits. Given number should be convert into binary number. That binary number converting '0' to '1' and '1' to '0' is called sign of a number (Plus+ or Minus-). 
+
+STEP1:
+x=10 ==> 0000 1010 (is Binary Number)
+0000 1010 
+
+If converted number starts with 1 sign is Minus-
+If converted number starts with 0 sign is Plus+
+
+1111 0101 ===> Sign is -(Minus)
+
+STEP2:
+Binary Ones Complement:
+In PYTHON adding '1' to given binary number is called Binary Ones Complement.
+
+x=10 ==> 0000 1010 (is Binary Number)
+0000 1010 
+               +1
+-----------------
+0000 1011 ==> 11
+----------------
+
+Example:
+a=10
+print(~a)#-11
+
+STEP3:
+Binary TWOs Complement:
+In PYTHON adding '1' to Binary Ones Complement is called Binary TWOs Complement.
+
+0000 1011
+              +1
+-----------------
+0000 1100 ==> -12
+----------------
+
+<< Binary Left Shift
+The left operands value is moved left by the number of bits specified by the right operand.
+a = 10         # 10=1010 
+a << 2;       # 40=101000==>Add Two digits right side 
+
+>> Binary Right Shift 	
+The left operands value is moved right by the number of bits specified by the right operand.
+a = 10       #10=1010 
+a >> 2;     #2=10==>Remove two digits right side
+
+EXAMPLE:
+a=10
+print(a<<2)#40
+print(a>>2)#2
+
+EXAMPLE:Output of the following Script:
+print(~True)
+print(True<<2)
+print(True>>2)
+
+Ternary Operator in Python
+Ternary operators also known as conditional expressions. It was added to Python in version 2.5. It allows to test a condition in a single line.
+
+Syntax:
+[on_true] if [expression] else [on_false] 
+
+Example:
+a,b =10,20
+Min = a if a < b else b 
+print(Min)
+
+Example:
+a=int(input("Enter Any Number:"))
+b=int(input("Enter Any Number:"))
+Max=a if a>b else b
+print("Max Value is:",Max)
+
+NOTE:
+Nesting of ternary operator is possible.
+
+Example:
+x=int(input("Enter First Number:"))
+y=int(input("Enter Second Number:"))
+z=int(input("Enter Third Number:"))
+Min=x if x<y and x<z else y if y<z else z
+print("Minimum Value:",Min)
+
+Python Operators Precedence (PEMDAS)
+1 Parentheses are always respected
+2 Exponentiation (raise to a power)
+3 Multiplication, Division, and Remainder
+4 Addition & Subtraction
+5 Left to right
+
+Operator		Description
+**		Exponentiation (raise to the power)
+~ + -		Complement, unary plus and minus
+* / % //		Multiply, divide, modulo and floor division
++ -		Addition and subtraction
+>> <<		Right and left bitwise shift
+&		Bitwise 'AND'
+^ |		Bitwise exclusive 'OR' and regular 'OR'
+<= < > >=		Comparison operators
+<> == !=		Equality operators
+= %= /= //= -= += *= **= Assignment operators
+is,is not		Identity operators
+in,not in		Membership operators
+not or and		Logical operators
+
+Example:
+a = 20;b = 10;c = 15;d = 5;e = 0
+e = (a + b) * c / d       #( 30 * 15 ) / 5
+print("Value of (a + b) * c / d is ",  e)
+
+e = ((a + b) * c) / d     # (30 * 15 ) / 5
+print( "Value of ((a + b) * c) / d is ",  e)
+
+e = (a + b) * (c / d);    # (30) * (15/5)
+print( "Value of (a + b) * (c / d) is ",  e)
+
+e = a + (b * c) / d;      #  20 + (150/5)
+print ("Value of a + (b * c) / d is ",  e)
+
+
+
+
+PYTHON Control Structures:
+In PYTHON Programming Control Structures are classified into:
+1. Sequential Control Structures
+2. Selection Control Structures
+3. Iterative Control Structures
+
+Control_Flow Pic:
+
+1. Sequential Control Structures:
+It get excutes the lines of code in sequential order. 
+
+Example:
+print("First Line")
+print("Second Line")
+print("Third Line")
+
+Example:
+print("First Line");print("Second Line");print("Third Line")
+
+2. Selection Control Structures: (Conditional Control Statements)
+It is popularly known as Python Decision Making. Python programming language provides following types of decision making statements.
+1 if statement (One-Way Decisions)
+2 if .. else statement (Two-Way Decisions)
+3 if .. elif .. else statement (Multi-Way Decisions)
+4 Nested if .. else (inner Decisions)
+5 Negative Conditions (Using Member-ship operators)
+
+In Conditions, the following Comparison or Relational Operators Commonly Using:
+1 >   greater than
+
+2 >= greater than equalto
+
+3 <   less than
+
+4 <= less than equalto
+
+5 == equal
+6 !=  not equal
+
+Python 'if' Statement
+It executes a set of statements conditionally, based on the value of a logical expression.
+
+Syntax:
+if expression :
+    statement_1 
+    statement_2
+    ....
+
+Example:
+num = 3
+if num > 0:
+    print(num, "It is a Positive Number.")
+    print("This is always printed.")
+
+num = -1
+if num > 0:
+    print(num, "It is a Positive Number.")
+    print("This is also always printed.")
+
+Example:
+num=input("Enter any Number: ")
+if int(num) > 0:
+  print(num, "It is a Positive number.")
+
+Example: 
+x=int(input("Enter Any Number: "))
+if x>0:
+    print("Value is +VE");
+    print("It is always get Executed");
+y=int(input("Enter Any Number: "))
+if y<0:
+    print("Value is -VE");
+    print("It is always get Executed"); 
+
+Example:(Try in 2.x)
+num=input("Enter Any Data: ")
+print("Type of the Data is: ")
+print(type(num))
+
+2 if .. else Statement
+An else statement can be combined with an if statement. An else statement contains the block of code that executes if the conditional expression in the if statement resolves to 0 or a FALSE value.
+
+Syntax
+if expression:
+   Statement(s)_1
+   Statement(s)_2
+else:
+   Statement(s)_3
+   Statement(s)_4
+
+Example:
+num=input("Enter any Number: ")
+if int(num) > 0:
+  print(num, "It is a Positive number.")
+else:
+  print(num, "It is a Negative number.")
+
+Example:
+num=input("Enter any Number: ")
+print(type(num))
+if int(num) > 0:
+  print(num, "It is a Positive number.")
+else:
+  print(num, "It is a Negative number.")
+
+Example:
+num = 3
+if num > 0:
+    print(num, "It is a Positive Number.")
+    print("This is always Printed.")
+else:
+    print(num, "It is a Negative Number.")
+    rint("This is also Printed.")
+
+Example:
+num = int(input("Enter a number: "))
+if (num % 2) == 0:
+   print("is Even")
+else:
+   print("is Odd")
+
+Python if...elif...else
+The elif statement allows you to check multiple expressions for TRUE and execute a block of code as soon as one of the conditions evaluates to TRUE. 
+
+Syntax
+if Expression1:
+   statement(s)_1
+   statement(s)_2
+elif Expression2:
+   statement(s)_3
+   statement(s)_4
+elif Expression3:
+   statement(s)_5
+   statement(s)_6
+else:
+   statement(s)_7
+   statement(s)_8
+
+NOTE:
+Core Python does not supports switch or case statements as in other languages.
+
+Example:
+num=input("Enter any Number: ")
+print(type(num))
+if int(num) > 0:
+  print(num, "It is a Positive number.")
+elif int(num)<0:
+  print(num, "It is a Negative number.")
+else:
+  print(num, "It is a ZERO.")
+
+Example:
+a=200;b=2
+if b>a:
+    print("b is bigger")
+elif a==b:
+    print("Both are equal")
+else:
+    print("a is Bigger")
+
+Example:
+x=int(input("Enter Any Number: "))
+y=int(input("Enter Any Number: "))
+if x>0 and y>0:
+    print("X and Y are Positives: ")
+elif x==0 and y==0:
+    print("Values are ZEROS")
+else:
+    print("Values are Negatives")
+    print("Thank U")
+
+Example:
+grade=int(input("Enter Your Marks: "))
+if grade >= 90:
+    print("Your Grade is A+")
+elif grade >=80:
+    print("Your Grade is A")
+elif grade >=70:
+    print("Your Grade is B+")
+elif grade >=60:
+    print("Your Grade is B")
+elif grade >=50:
+    print("You are Pass")
+else:
+    print("Sorry You Failed")  
+
+Example:
+Marks=int(input("Enter Student Marks: "))
+if Marks<=100 and Marks>=90:
+    print("A+ Grade")
+elif Marks<=90 and Marks>=80:
+    print("A Grade")
+elif Marks<=80 and Marks>=70:
+    print("B+ Grade")
+elif Marks<=70 and Marks>=60:
+    print("B Grade")
+elif Marks<=60 and Marks>=50:
+    print("C Grade")
+else:
+    print("Just Failed or Invalid Marks")
+
+EXAMPLE:
+First=int(input("Enter Any Number:"))
+Second=int(input("Enter Any Number:"))
+Third=int(input("Enter Any Number:"))
+if First>Second and First>Third:
+    print("Biggest Number is:",First)
+elif Second>Third:
+    print("Biggest Number is:",Second)
+else:
+    print("Biggest Number is:",Third)
+
+day 8 notes
+
+
+Nested if .. else statement
+In general nested if-else statement is used when we want to check more than one conditions. Conditions are executed from top to bottom and check each condition whether it evaluates to true or not.
+
+Syntax:
+     if expression1 :
+         if expression2 :
+          Statement_3
+          Statement_4
+        ....
+      else :
+         Statement_5
+         Statement_6
+        ....
+     else :
+       Statement_7 
+       Statement_8
+
+Example:
+num = int(input("Enter a number: "))
+if num >= 0:
+    if (num == 0):
+        print("ZERO")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")
+
+Example:
+x=int(input("Enter Any Number: "))
+if x!=0:
+    if x<0:
+        print("-VE")
+    else:
+        print("+Ve")
+else:
+    print("ZERO")
+
+Example:
+x=int(input("Enter Any Number: "))
+if x==0:
+    print("ZERO")
+else:
+    if x>0:
+        print("+VE")
+    else:
+        print("-VE")
+
+Example:
+x=int(input("Enter Any Number: "))
+if x>=0:
+    if not x==0:
+        print("+VE")
+    else:
+        print("ZERO")
+else:
+    print("-VE")
+
+Example:
+grade=int(input("Enter Your Marks: "))
+if grade >= 90:
+    print("Your Grade is A+")
+else:
+    if grade >=80:
+        print("Your Grade is A")
+    else:
+            if grade >=70:
+                print("Your Grade is B+")
+            else:
+                    if grade >=60:
+                        print("Your Grade is B")
+                    else:
+                            if grade >=50:
+                                print("You are Pass")
+                            else:
+                                    print("Sorry You Failed")
+
+Example:
+year =int(input("Enter Any Year: "))
+if (year % 4) == 0:
+   if (year % 100) == 0:
+       if (year % 400) == 0:
+           print("is a leap year")
+       else:
+           print("is not a leap year")
+   else:
+       print("is a leap year")
+else:
+   print("is not a leap year")
+
+Example: Use the and operator in an if statement
+x = False  
+y = True  
+if x and y:  
+    print('Both x and y are True')  
+else:  
+    print('x is False or y is False or both x and y are False')  
+
+Negative Conditions in PYTHON:
+If a condition is true the not operator is used to reverse the logical state, then logical not operator will make it false.
+
+Example:
+x = int(input("Enter Any Number: "))
+print(x)  
+if not x == 50:  
+    print('the value of x different from 50')  
+else:  
+    print('the value of x is equal to 50')
+
+Example:
+x=int(input("Enter Any Number: "))
+if not x>0:
+    print("Value is -VE")
+else:
+    print("Value is +VE")
+
+
+
+Iterative Control Structures (Python Loops)
+
+What is a Loop?
+A loop is a sequence of instructions that is continually repeated until a certain condition is reached.
+
+Why Loop?
+In a loop structure, the loop asks a question. If the answer requires an action, it is executed. The same question is asked again and again until no further action is required. Each time the question is asked is called an iteration.
+
+TYPES OF LOOPS in PYTHON:
+1. for		2. while
+3. nested loops	4. break and continue (Loop Control Statements)
+
+for loop in PYTHON:
+It is used to iterate over the items of any sequence including the Python list, string, tuple etc.
+
+Syntax
+for variable_name in sequence :
+    statement_1
+    statement_2
+
+Example:
+for char in "PYTHON":
+    print("The Character is: ",char)
+
+Explanation:
+for ==> Keyword or Iterator
+char ==> Variable
+in ==> Operator
+"PYTHON" ==> String or Iterable
+for char in "PYTHON": ==> Iteration(s)
+
+Example:
+course_list = ["Big Data", "Hadoop", "Spark", "Scala"]  
+for list in course_list:  
+        print(list)  
+
+Example:
+primes = [2, 3, 5, 7]
+for prime in primes:
+    print(prime)
+
+Example:
+languages = ["C", "C++", "Perl", "Python"] 
+for x in languages:
+    print(x)
+
+Example:
+numbers = [6, 5, 3, 8, 4, 2, 5, 4, 11]
+Sum = 0
+for val in numbers:
+     Sum = Sum+val
+print("The sum is", Sum)
+
+Example:
+for num in [10,20,30,40,50]:
+    if num >=40:
+        print("Greater Than equal 40 is: ",num)
+    else:
+        print("Lesser Than 40 is: ",num)
+
+Example:
+dataset = ['BigData', 'python', 'Deep Learning']
+for data in dataset:
+    print(data.upper())
+
+day 9 nptes
+
+range() and xrange() functions in PYTHON:
+1 range() – This returns a list of numbers created using range() function.
+2 xrange() – This function returns the generator object that can be used to display numbers only by looping. 
+
+Main Difference between range and xrange:
+1. range() always returns list output for any version
+2. xrange() always returns genarator xrange object (Deprecated)
+3. range() takes More Memory, xrange() takes Less Memory
+4. range() for list operations, xrange() is not for list
+5. range() faster, xrange() slower
+6. xrange() renamed as range() in Python-3.0
+7. Python-2.0 range() function deprecated from PYHTON-3.0
+8. in Python-2  <type xrange>, in Python-3 <class range>
+
+Range Function
+It generates lists containing arithmetic  progression. It returns a list of consecutive integers. The function has one, two or three parameters where last two parameters are optional. It is widely used in for loops.
+
+3 variations of range() function:
+range(stop)  - Starts from  O  till  (stop - 1)
+range(start,stop) - Ends at (stop - 1)
+range(start,stop,step) - Step can not be 0, default is  1
+
+Syntax:
+range(a)		range(a,b)		range(a,b,c)
+
+NOTE: 
+"For Each" Loops in Python with enumerate() and range()
+
+range(a) : Generates a sequence of numbers from 0 to a, excluding a, incrementing by 1.
+
+Syntax
+for <variable> in range(<number>): 
+
+Example:
+list(range(5))
+
+Example:
+for a in range(4):  
+  print(a)  
+
+Example:
+MyItems=[1,2,3,4]
+for i in range(len(MyItems)):
+      print(MyItems[i])
+
+Example:
+MyData=int(input("Enter Any Number in Range: "))
+for data in range(MyData):
+    print(data)
+
+Example:
+print(range(10))#range(0, 10)
+print(list(range(10)))#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(tuple(range(10)))#(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(set(range(10)))#{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+print(frozenset(range(10)))#frozenset({0, 1, 2, 3, 4,5, 6, 7, 8, 9})
+
+range(a,b) : Generates a sequence of numbers from a to b excluding b, incrementing by 1.
+
+Syntax
+for "variable" in range("start_number", "end_number"):
+
+Note: Start Value must be less than end Value..!!
+
+Example:
+range(5,10)
+
+Example:
+for a in range(2,7):  
+        print(a)
+
+Example:
+snumber=int(input("Enter Any Start Number: "))
+enumber=int(input("Enter Any End Number: "))
+for data in range(snumber,enumber):
+    print(data)
+
+range(a,b,c) : Generates a sequence of numbers from a to b excluding b, incrementing by c.
+
+Syntax
+for "variable" in range("start_number", "end_number",increment):
+
+Note:
+Start Value must be less than end value, If it is increment..!!
+Start Value must be bigger than end value, If it is decrement...!!
+
+Example:
+range(0,10,2)
+
+Example:
+for a in range(2,19,5):  
+        print(a)
+
+Example:
+snumber=int(input("Enter Any Start Number: "))
+enumber=int(input("Enter Any End Number: "))
+incre=int(input("Enter Any increment Number: "))
+for data in range(snumber,enumber,incre):
+    print(data)
+
+Example: Multiplication Table
+n=int(input("Enter Any Number: "))
+for num in range(1, 11):
+    print(n, "X", num, "=", n * num)
+
+for loop with else clause
+A for loop can have an optional else block as well. The else part is executed if the items in the sequence used in for loop exhausts. break statement can be used to stop a for loop. In such case, the else part is ignored.
+
+Syntax-2:
+for <variable> in <sequence>:
+	<statements>
+	<statements>
+else:
+	<statements>
+	<statements>
+
+
+Example:
+digits = [0, 1, 5, 7]
+for i in digits:
+    print(i)
+else:
+    print("No items left.")
+
+Example:
+for i in range(5):
+    print(i)
+else:
+    print('Iterated over everything :)')
+
+LOOPING CONTROL STATEMENTS/ TRANSFER STATEMENTS
+A statement that alters the execution of a loop from its designated sequence is a loop control statement.
+
+break
+To break out from a loop, you can use the keyword "break". 
+
+Syntax
+for variable_name in sequence :
+   statement_1 
+   statement_2
+   ......
+   if expression:
+   break
+
+Example:
+digi = [0, 1, 5, 7]
+for data in digi:
+    if data==4:
+        break
+    print(data)
+else:
+    print("Loop Success")
+
+Example:
+for i in range(5):
+    if i==2:
+        break
+    print(i)
+else:
+    print('Iterated over everything :)')
+
+NOTE: 
+if we stop the loop, say with a break statement, then the else suite will not be executed
+
+Example:
+for x in "PYTHON":
+    if(x=='O'):
+        break    
+    print(x)
+else:
+    print("Loop Completed")
+
+day 10 notes
+
+
+range(a,b,c) : Generates a sequence of numbers from a to b excluding b, incrementing by c.
+
+Syntax
+for "variable" in range("start_number", "end_number",increment):
+
+Note:
+Start Value must be less than end value, If it is increment..!!
+Start Value must be bigger than end value, If it is decrement...!!
+
+Example:
+range(0,10,2)
+
+Example:
+for a in range(2,19,5):  
+        print(a)
+
+Example:
+snumber=int(input("Enter Any Start Number: "))
+enumber=int(input("Enter Any End Number: "))
+incre=int(input("Enter Any increment Number: "))
+for data in range(snumber,enumber,incre):
+    print(data)
+
+Example: Multiplication Table
+n=int(input("Enter Any Number: "))
+for num in range(1, 11):
+    print(n, "X", num, "=", n * num)
+
+for loop with else clause
+A for loop can have an optional else block as well. The else part is executed if the items in the sequence used in for loop exhausts. break statement can be used to stop a for loop. In such case, the else part is ignored.
+
+Syntax-2:
+for <variable> in <sequence>:
+	<statements>
+	<statements>
+else:
+	<statements>
+	<statements>
+
+
+Example:
+digits = [0, 1, 5, 7]
+for i in digits:
+    print(i)
+else:
+    print("No items left.")
+
+Example:
+for i in range(5):
+    print(i)
+else:
+    print('Iterated over everything :)')
+
+LOOPING CONTROL STATEMENTS/ TRANSFER STATEMENTS
+A statement that alters the execution of a loop from its designated sequence is a loop control statement.
+
+break
+To break out from a loop, you can use the keyword "break". 
+
+Syntax
+for variable_name in sequence :
+   statement_1 
+   statement_2
+   ......
+   if expression:
+   break
+
+Example:
+digi = [0, 1, 5, 7]
+for data in digi:
+    if data==4:
+        break
+    print(data)
+else:
+    print("Loop Success")
+
+Example:
+for i in range(5):
+    if i==2:
+        break
+    print(i)
+else:
+    print('Iterated over everything :)')
+
+NOTE: 
+if we stop the loop, say with a break statement, then the else suite will not be executed
+
+Example:
+for x in "PYTHON":
+    if(x=='O'):
+        break    
+    print(x)
+else:
+    print("Loop Completed")
+
+Continue
+The continue statement is used to tell Python to skip the rest of the statements in the current loop block and to continue to the next iteration of the loop.
+
+Syntax:
+continue;
+
+Syntax
+for variable_name in sequence :
+   statement_1 
+   statement_2
+   ......
+   if expression:
+   continue;
+
+Example:
+for i in range(1,10):
+    if i == 3:
+        continue
+    print(i)
+
+Example:
+digi=[1,2,3,4,5]
+for data in digi:
+    if data==4:
+        continue
+    print(data)
+else:
+    print("Loop Success")
+
+Python while Loop Statements:
+while Loop is used to execute number of statements or body till the condition passed in while is true. Once the condition is false, the control will come out of the loop.
+
+Syntax:
+while <expression>:  
+       Body  
+
+Syntax
+while (expression) :
+    statement_1 
+    statement_2
+
+Example:
+x=1
+while x<=5:
+    print(x)
+    x=x+1
+print("loop Finished")
+
+Example: Reverse Numbers
+n=5
+while(n>0):
+    print(n)
+    n-=1
+print("Good Bye")
+
+Example:
+x=int(input("Enter Any Number less than 10: "))
+while(x<=10):
+    print(x)
+    x+=1
+print("Loop OK")
+
+NOTE: Any infinite loop hit Ctrl+C to Exit from infinite loop..!!
+
+Python: while and else statement
+There is a structural similarity between while and else statement. Both have a block of statement(s) which is only executed when the condition is true. 
+
+Syntax:
+while (expression) :
+    statement_1 
+    statement_2
+    ......	
+else :
+    statement_3 
+    statement_4
+
+Example:
+x=1
+while x<=5:
+    print(x)
+    x=x+1
+else:
+    print("loop Finished")
+
+Example:
+a=10  
+while a>0:
+    print("Value of a is",a)
+    a=a-2
+else:
+    print("Loop is Completed")
+
+Python nested loops
+Python programming language allows to use one loop inside another loop.
+
+Syntax
+for [first iterating variable] in [outer loop]: # Outer loop
+    [do something]  # Optional
+    for [second iterating variable] in [nested loop]:   # Nested loop
+        [do something]  
+
+In nested loops find the following facts:
+1. X-axis always contains Y-axis
+2. Y-asis contains actual data
+3. A row contains n number of columns
+4. A column contains n number characters
+5. Outer loop represents X-axis (Rows)
+6. Inner loop represents Y-axis (Columns)
+7. Mathematically we are representing width, height (x,y)
+
+Example:
+for a in range(1,3):
+       for b in range(1,3):
+           print(a,b)
+
+Example:
+for x in range(1, 4):
+    for y in range(1, 4):
+        print('%d * %d = %d' % (x, y, x*y))
+
+Example:
+pattern=int(input("Enter Number of Rows: "))
+for i in range(1, pattern+1): 
+    for j in range(1,i+1): 
+        print("*",end=" ")
+    print()
+
+Example:
+pattern=int(input("Enter Number of Rows: "))
+for i in range(1, pattern+1): 
+    for j in range(1,i+1): 
+        print(i,end=" ")
+    print()
+
+
+day 11 notes  
+
+
+PYTHON PASS KEYWORD
+It is used when a statement is required syntactically but you do not want any command or code to execute.
+
+Why Pass?
+It is an empty statement
+It is null statement
+It results into no operation (NOP)
+
+NOTE:It is like abstract method in JAVA
+
+Syntax
+pass
+
+Example:
+for letter in 'Python': 
+   if letter == 'h':
+      pass
+      print( 'This is pass block')
+   print( 'Current Letter :', letter)
+
+Example:
+x=1
+while(x<=3):
+  if(x==1):
+    print("1. PYTHON is SCRIPTING");
+  elif(x==2):
+      pass
+  else:
+   print("3. It is Fun to learn");
+  x+=1
+
+Armstrong number:
+Number of n digits which are equal to sum of nth power of its digits.
+
+Example: 5
+n(Number of Digits)=1
+5 power of 1 =5 ==> It is a armstrong number
+
+Example:7
+n(Number of Digits)=1
+7 power of 1 =7 ==> It is a armstrong number
+
+Armstrong numbers are : 0 1 2 3 4 5 6 7 8 9
+
+Example:22
+n(Number of Digits)=2
+2 power of 2 =4
+2 power of 2 =4
+4+4=8
+22!=8  ==> It is not a armstrong number
+
+Example: 153
+n(Number of Digits)=3
+1 power of 3 =1
+5 power of 3 =125
+3 power of 3 =27
+1+125+27=153 ==> It is a armstrong number
+
+Example(in PYTHON):
+x=int(input("Enter Any Number: "))
+for i in range(x):
+    num=i
+    result=0
+    n=len(str(i))
+    while(i!=0):
+        digit=i%10
+        result=result+digit**n
+        i=i//10
+    if num==result:
+        print(num)
+
+
+day 12 notes 
+
+
+Command Line Arguments
+The command line arguments must be given whenever we want to give the input before the start of the script. argv is not Array, it is a List. It is available sys Module.  The Argument which are passing at the time of execution are called Command Line Arguments.
+
+Example:
+from sys import argv
+print(type(argv))#<class 'list'>
+
+NOTE:
+Run PYTHON Script at the command prompt of Any OS.
+$cd desktop
+
+Example:
+$notepad Hello.py
+import sys
+ArgList=sys.argv
+print(ArgList)
+print(sys.argv[0])
+
+Executing The Script:
+$python Hello.py
+$python Hello.py 1 2
+
+Example:
+$notepad Hello.py
+from sys import argv
+print("Number of Command Line Arguments:", len(argv))
+print("List of Command Line Arguments:", argv)
+print("Line Arguments Are:",end=" ")
+for x in argv:
+    print(x,end=" ")
+
+Executing The Script:
+$python Hello.py
+$python Hello.py 1 2 3
+
+Example:
+$notepad Hello.py
+from sys import argv
+Total=0
+args=argv[1:]
+for x in args :
+ n=int(x)
+ Total=Total+n
+print("The Total is: ",Total)
+
+Executing The Script:
+$python Hello.py
+$python Hello.py 10 20 30 40
+
+Example:
+from sys import argv
+print(argv[0])
+print(argv[1])
+
+Executing The Script:
+$python Hello.py
+
+Difference between del and None Keywords:
+The variable will be removed and we cannot access that variable(unbind operation)
+
+Example:
+PyStr="PYTHON"	
+del PyStr	
+print(PyStr)#NameError: name 'PyStr' is not defined.
+
+None:
+None assignment the variable will not be removed but the corresponding object is eligible for Garbage Collection(re-bind operation).
+
+Example:
+PyStr="PYTHON"	
+PyStr=None	
+print(PyStr)#None
+
+MORE SCRIPTS:
+Example:
+n=int(input("Enter any number: "))
+a=list(map(int,str(n)))
+b=list(map(lambda x:x**3,a))
+if(sum(b)==n):
+    print("The number is an armstrong number. ")
+else:
+    print("The number isn't an arsmtrong number. ")
+
+Example:
+num=int(input("Enter Any Number: "))
+order=len(str(num))
+sum=0
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** order
+   temp //= 10
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+Example:
+num = int(input("Enter Any Number: "))
+factorial = 1
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
+
+Example:
+for row in range(6):
+    for col in range(6):
+        if col==0 or col==5 or(row==col and col>0 and col<5):
+            print("*",end="")
+        else:
+            print(end=" ")
+    print()
+
+Example:
+MyStr=input("Enter Any String: ")
+length=len(MyStr)
+for row in range(length):
+    for col in range(row+1):
+        print(MyStr[col],end="")
+    print()
+
+Example:
+n=int(input("Enter Numbers for f series: "))
+first=0
+second=1
+for i in range(n):
+    print(first)
+    temp=first
+    first=second
+    second=temp+second
+
+Example: Chrismas Tree
+b = 34
+c = 0
+while b > 0 and c < 33 :
+        print('\33[1;32;48m'+' '*b+'*'+'*'*c+'\33[0m')
+        b -= 1
+        c += 2
+for r in range(3):
+    print(' '*33,'||')
+print(' '*32, end = '\====/')
+print('')
+
+Example:Diamond
+Method-I
+lst1 = [(10,1),(9,3),(8,5),(7,7)]
+lst2 = lst1[-2::-1]
+for i,j in lst1+lst2:
+    print(' '*i+'*'*j)
+
+Method-II: Diamond
+for i in range(-5,6):
+    print(abs(i)*' '+'*'*abs(abs(i)-6)+'*'*abs(abs(i)-5))
+
+What is Data?
+Data is a set of values of qualitative or quantitative variables.
+Qualitative data is descriptive information (it describes something)
+Quantitative data, is numerical information (numbers).
+
+What is Information?
+If we arrange some data in an appropriate sequence, then it forms a Structure and gives us meaning. We found two things in Information: One is Data and the other is Structure.
+
+Define Data Structure?
+A data structure is a specialized format for organizing and storing data. 
+
+A data structure is classified into two categories: 
+1 Linear data structures
+2 Non-Linear data structures
+
+Linear data structure: 
+A data structure which is sequential and continues in nature.
+Example: array,linked list,stack and queue.
+
+Non Linear data structures
+These are arranged in random manner. It can be used to hierarchical relationship among data elements. 
+Example: Tree, Hash tree, Binary tree, Heap and graph.
+
+Data Structures in PYTHON:
+In PYTHON builtin data structures are:
+1.  lists  (Lists are enclosed in brackets [])
+2. tuples (Tuples are enclosed in parentheses())
+3. sets (Sets are enclosed in curly brackets {,})
+4. frozensets(Frozen Sets  are enclosed in curly brackets{,})
+5. dictionaries (Dictionaries are built with curly brackets{})
+ 
+For Data Structures in PYTHON:
+Hashable is ==> Immutable (Readonly)
+Unhashable is ==> Mutable (Read&Write)
+LIST is Unhashable ==> Mutable (Read&Write)
+TUPLE is Hashable => Immutable (Readonly)
+SET is Unhashable ==> Mutable (Read&Write)
+FROZENSET is Hashable=>Immutable(Readonly)
+DICTIONARY :
+KEY ==> Hashable(Readonly)
+Value ==> Unhashable(Read&Write)
+
+String operations in PYTHON:
+In general, you can’t perform mathematical operations on strings, even if the strings look like numbers. The + operator performs string concatenation, which means it joins the strings by linking them end-to-end.
+
+Example:
+first="First"; second="Second"
+fullstr=first+" "+second
+print(fullstr)
+
+Example:String Repetition
+print('Spam'*3)
+
+Example: Different Quotes in PYTHON:
+PyStr="PYTHON"
+print(type(PyStr))#<class 'str'>
+PyStr='PYTHON'
+print(type(PyStr))#<class 'str'>
+PyStr="""PYTHON"""
+print(type(PyStr))#<class 'str'>
+PyStr='''PYTHON'''
+print(type(PyStr))#<class 'str'>
+
+
+
+
+day 13 notes
+
+
+
+String operations in PYTHON:
+In general, you can’t perform mathematical operations on strings, even if the strings look like numbers. The + operator performs string concatenation, which means it joins the strings by linking them end-to-end.
+
+Example:
+first="First"; second="Second"
+fullstr=first+" "+second
+print(fullstr)
+
+Example:String Repetition
+print('Spam'*3)
+
+Example: Different Quotes in PYTHON:
+PyStr="PYTHON"
+print(type(PyStr))#<class 'str'>
+PyStr='PYTHON'
+print(type(PyStr))#<class 'str'>
+PyStr="""PYTHON"""
+print(type(PyStr))#<class 'str'>
+PyStr='''PYTHON'''
+print(type(PyStr))#<class 'str'>
+
+Assigning and Re-Assigning:
+To assign a value to Python variables, type the value after the equal sign(=).
+
+Example:
+MyStr="PYTHON"
+print(MyStr)#PYTHON
+MyStr="Machine Leaning"
+print(MyStr)#Machine Leaning
+
+Example:
+PyStr="python"
+print(PyStr)
+print(PyStr+PyStr)
+print(PyStr+" "+PyStr)
+print(PyStr*3)
+print(PyStr[0])
+PyStr[0]='P'
+print(PyStr)
+
+O/P:
+TypeError: 'str' object does not support item assignment
+
+Multiple Assignment
+You can assign values to multiple python variables in one statement.
+
+Example:
+a=b=c=5
+print(a);print(b);print(c)
+
+Define String Slicing?
+To cut a substring from a string is called string slicing. 
+
+Here two indices are used separated by a colon (:). A slice 3:7 means indices characters of 3rd, 4th, 5th and 6th positions. The second integer index i.e. 7 is not included. You can use negative indices for slicing.
+
+Example:
+PyStr="PYTHON IS FUN"
+print(PyStr[0:2])#PY
+print(PyStr[2:6])#THON
+print(PyStr[7:10])#IS
+
+String Indices or Indexing
+Strings are arrays of characters and elements of an array can be accessed using indexing. Indices start with 0 from left side and -1 when starting from right side.
+
+string1 ="PYTHON"
+Character		P      Y	T      H     O     N
+Index (from left)	0      1	2       3     4	     5
+Index (from right)   -6    -5	-4     -3    -2    -1
+
+Example:
+PyStr="Naresh i Technologies"
+print(PyStr[0])#N
+print(PyStr[-1])#s
+print(PyStr[-4])#g
+print(PyStr[4])#s
+
+Unicode String
+Normal strings in Python are stored internally as 16-bit Storing ASCII characters in an 8-bit byte. while Unicode strings are stored as 16-bit Unicode. 
+
+Example:
+str1=r"Normal String"
+print("PYTHON Normal String is: ",str1)
+str2=u"Unicode String"
+print("PYTHON Unicode String is: ",str2)
+
+Example: Indexing with Unicode Chracters
+PyStr=u"हिन्दीहिन्दीहिन्दीहिन्दीहिन्दी"
+print(PyStr[0])#ह
+print(PyStr[-1])#ी
+print(PyStr[4])#द
+print(PyStr[-4])#न
+
+Example:Slicing with Unicode Characters
+PyStr=u"हिन्दीहिन्दीहिन्दीहिन्दीहिन्दी"
+print(PyStr[0:1])#ह
+print(PyStr[1:3])#िन
+print(PyStr[4:7])#दीह
+
+Example:
+PyUString=u"नमस्ते आप कैसे हैं?"
+print(PyUString)
+print(PyUString[0])
+print(PyUString[4])
+print(PyUString[-4])
+print(PyUString[-2])
+
+NOTE: 
+As you can see, Unicode strings use the prefix u, just as raw strings use the prefix r.
+
+PYTHON-String Library: 
+It supports the following list of built-in Methods:
+
+capitalize() Method
+It  returns a copy of the string with only its first character capitalized.
+
+Syntax
+str.capitalize()
+
+Example:
+str1="naresh i Technologies"
+print(str1.capitalize())
+str2="HELLO HOW ARE U"
+print(str2.capitalize())
+
+Python String isdigit() Method
+It checks whether the string consists of digits only.
+
+Syntax
+str.isdigit()
+
+Example:
+str1="PYTHON"
+print(str1.isdigit())
+str2="12345"
+print(str2.isdigit())
+
+islower() Method
+It checks whether all the case-based characters  of the string are lowercase.
+
+Syntax
+str.islower()
+
+Example:
+PyStr="PYTHON"
+print(PyStr.islower())
+PyStr="python"
+print(PyStr.islower())
+PyStr="pYthOn"
+print(PyStr.islower())
+
+len() function:
+It returns the length of the string.
+
+Syntax
+len( str )
+
+Example:
+PyStr="PYTHON"
+print(len(PyStr))
+PyStr="DataScience is ROCKING"
+print(len(PyStr))
+
+Joining of Strings:
+join() Method
+It is a string method and returns a string in which the elements of sequence have been joined by str separator.
+
+Syntax
+Str.join(iterable) 
+
+Example:
+PyList=['1','2','3','4']  
+Sep="-"
+print(Sep.join(PyList))
+
+Example:
+PyList=["H","E","L","L","O"]
+Sep="__"
+print(Sep.join(PyList))#H__E__L__L__O
+
+Python String max() Function
+It returns the max alphabetical character from the string str.
+
+Syntax
+max(str)
+
+Example:
+PyStr="abcd"
+print(max(PyStr))
+PyStr="abcddcba"
+print(max(PyStr))
+PyStr="Maximum"
+print(max(PyStr))
+
+Python String replace() Method
+It returns a copy of the string in which the occurrences of old have been replaced with new, optionally restricting the number of replacements to max.
+
+Syntax:
+str.replace(old, new[,count])
+
+Example:
+str = "Hello How are You"
+print(str.replace("You", "U"))
+print(str.replace("are", "was", 3))
+
+title() Method
+It returns a copy of the string in which first characters of all the words are capitalized.
+
+Syntax:
+str.title(); 
+
+Example:
+PyStr = "this is powerful python scripting !";
+print(PyStr.title())
+
+zfill() Method
+It pads string on the left with zeros to fill width.
+
+Syntax:
+str.zfill(width)
+
+Example:
+PyStr="PYTHON"
+print(PyStr.zfill(10))#0000PYTHON
+print(PyStr.zfill(15))#000000000PYTHON
+ 
+
+day 14 
+
+
+
+Python String isalnum() Method
+It checks whether the string consists of alphanumeric characters.
+
+Syntax
+str.isalnum()
+
+Example:
+PyStr="this2009"; 
+print(PyStr.isalnum())
+PyStr="this is string example....wow!!!";
+print(PyStr.isalnum())
+
+String rjust()
+It returns a new string of given length after substituting a given character in left side of original string.
+
+Syntax:
+string.rjust(length, fillchar)
+
+String ljust() 
+It returns a new string of given length after substituting a given character in right side of original string.
+
+Syntax:
+string.ljust(length, fillchar)
+
+center() method
+It will center align the string, using a specified character as the fill character.
+
+Syntax:
+center( length, fillchr )
+
+Example:
+PyStr="PYTHON"
+length=10;fillchar="*"
+print(PyStr.ljust(length,fillchar))
+print(PyStr.rjust(length,fillchar))
+print(PyStr.center(length,fillchar))
+
+Removing spaces from a string:
+rstrip()
+It removes characters from the right based on the argument
+
+Syntax:
+string.rstrip([chars])
+
+lstrip()
+It removes characters from the left based on the argument
+
+Syntax:
+string.lstrip([chars])
+
+strip()
+It is used to remove all the leading and trailing spaces from a string.
+
+Syntax :
+string.strip([chars])
+
+NOTE:
+chars (optional) - a string specifying the set of characters to be removed.
+
+Example:
+PyStr='   Python For DataScience   '
+print(PyStr.lstrip())
+print(PyStr.rstrip())
+print(PyStr.strip()) 
+
+isspace()
+It returns True if there are only whitespace characters in the string. If not, it return False. 
+
+Syntax:
+string.isspace()
+
+It returns:
+True if all characters in the string are whitespace characters
+False if the string is empty or contains at least one non-printable() character
+
+Example:
+PyStr="Python"
+print(PyStr.isspace())
+PyStr="Python is"
+print(PyStr.isspace())
+PyStr=""
+print(PyStr.isspace())
+
+Example:
+PyStr="\t\t"
+print(PyStr.isspace())
+PyStr="\n"
+print(PyStr.isspace())
+PyStr=" "
+print(PyStr.isspace())
+
+isprintable()
+It returns True if all characters in the string are printable or the string is empty. If not, it returns False. 
+
+Syntax:
+string.isprintable()
+
+Example:
+PyStr='Space is a printable'
+print(PyStr.isprintable())
+PyStr='\nNew Line is printable'
+print(PyStr.isprintable())
+PyStr=''
+print(PyStr.isprintable())
+
+casefold()
+It convert strings to casefolded strings for caseless matching. 
+
+Syntax:
+string.casefold()
+
+Example:
+PyStr = "PYTHON IS AWESOME"
+print(PyStr.casefold())
+
+Python String swapcase()
+It converts all uppercase characters to lowercase and all lowercase characters to uppercase characters of the given string, and returns it.
+
+Syntax:
+string.swapcase()
+
+Example:
+PyStr = "THIS SHOULD ALL BE LOWERCASE."
+print(PyStr.swapcase())
+PyStr="this should all be uppercase."
+print(PyStr.swapcase())
+PyStr= "ThIs ShOuLd Be MiXeD cAsEd."
+print(PyStr.swapcase())
+PyStr="UPPER lower"
+print(PyStr.swapcase())
+
+Python String expandtabs()
+It returns a copy of string with all tab characters '\t' replaced with whitespace characters until the next multiple of tabsize parameter.
+
+Syntax:
+string.expandtabs(tabsize) #default tab is 8 spaces
+
+Example:
+PyStr='xyz\t12345\tabc'
+print(PyStr.expandtabs())
+print(PyStr.expandtabs(10))
+print(PyStr.expandtabs(15))
+
+Finding Substrings: 
+In PYTHON programming to find sub strings we can use the following 4 methods:
+Forward direction:
+1 find() 		2 index()
+Backward direction:
+1 rfind() 		2 rindex()
+
+find():
+Returns index of first occurrence of the given substring. If it is not available then we will get -1
+
+Syntax:
+String.find(substring,begin,end)
+
+Example:
+PyStr="Learning Python is Simpler"
+print(PyStr.find("Python")) 
+print(PyStr.find("Data")) 
+print(PyStr.find("e"))
+
+Example:
+PyStr="hellopythonisgreat"
+print(PyStr.find('a'))
+print(PyStr.find('b',7,15))
+print(PyStr.find('t',7,15))
+print(PyStr.find('t',8,15))
+
+index() method:
+It returns the index of a substring inside the string (if found). If the substring is not found, it raises an exception. 
+
+Syntax:
+str.index(sub[, start[, end]] )
+
+Example:
+PyStr='Python programming is fun'
+print(PyStr.index('is fun'))
+print(PyStr.index('ing', 10))
+print(PyStr.index('g is', 10, -4))
+
+Backward direction:
+1 rfind() 		2 rindex()
+
+rfind()
+It returns the highest index of the substring (if found). If not found, it returns -1.
+
+Syntax:
+str.rfind(sub[, start[, end]] )
+
+Example:
+PyStr="Learning Python is Simpler"
+print(PyStr.rfind("S")) 
+print(PyStr.rfind("e"))
+print(PyStr.rfind("o",10))
+print(PyStr.rfind("e",15,25))
+
+rindex()
+It returns the highest index of the substring inside the string (if found). If the substring is not found, it raises an exception.
+
+Syntax:
+str.rindex(sub[, start[, end]] )
+
+Example:
+PyStr='Do small things with great love'
+print(PyStr.rindex('u'))
+print(PyStr.rindex('t', 2))
+print(PyStr.rindex('h', 6, 20))
+
+count()
+It returns the number of occurrences of a substring in the given string. 
+
+Syntax:
+string.count(sub[, start[, end]])
+
+Example
+PyStr = "Python is Awesome, Yes or Not"
+print(PyStr.count('i'))
+print(PyStr.count('o',1))
+print(PyStr.count('s',10,25))
+
+
+Day 15 
+
+WORKING WITH PYTHON LIST DATA STRUCTURE
+A list is a container which holds comma-separated values (items or elements) between square brackets[ ] where items or elements need not all have the same type. It can have any number of items and they may be of different types (integer, float, string etc.).
+
+List has the following five characteristics:
+1. MUTABLE
+2. Linear Data Structure
+3. Mixed Type Elements
+4. Variable Length
+5. Zero Based Indexing
+
+NOTE: Traditional arrays can not be created in Python.
+
+Types of lists :
+Empty List:  A list without any element is called an empty list
+
+Example:
+PyList = [] 
+print(PyList)#[]
+
+Number List:
+1 Integers List:  
+A list with only numbers  is called an integer list
+
+Example:
+PyList=[1,2,3,4,5]
+print(type(PyList))#<class 'list'>
+print(PyList)#[1,2,3,4,5]
+
+Float List:
+A list with only decimal numbers  is called float list
+
+Example:
+PyList=[1.1,2.88,3.33,4.1,5.0]
+print(type(PyList))#<class 'list'>
+print(PyList)#[1.1,2.88,3.33,4.1,5.0]
+
+String List:
+A list with only Strings & Chars  is called a string list
+
+Example:
+PyList = ["Sara", "David", "Raju", "Sandy"]
+print(PyList)#['Sara', 'David', 'Raju', 'Sandy']
+print(type(PyList))#<class 'list'>
+
+Mixed List: 
+A list with different datatypes is called Mixed list.
+
+Example:
+PyList=["Sara", 1, 2.03,'A'] 
+print(type(PyList))#<class 'list'>
+print(PyList)#['Sara', 1, 2.03,'A'] 
+
+Nested List: 
+A list with in another list is called Nested List.
+
+Example:
+PyList=["Mouse", [8, 4, 6], ['a']] 
+print(PyList)#['Mouse', [8, 4, 6], ['a']] 
+print(type(PyList))#<class 'list'>
+
+Example:Dynamic List
+PyList=eval(input("Enter List: "))
+print(type(PyList))#<class 'list'>
+print(PyList)
+
+Basic List Operations
+We can perform the following basic operations on list data structure.
+1.Concatenation
+2. Repetition
+3. Membership
+4. Iteration
+5. Length
+
+Len Example:(Length)  
+PyDataSet=[1,2,4,4]
+print(len(PyDataSet))#4
+
+Example2: Concatenation
+PyDataSet1=[1,2,4,4]
+PyDataSet2=['a','b','c','d']
+PyDataSet3=PyDataSet1+PyDataSet2
+print(PyDataSet3)#[1,2,4,4,'a','b','c','d']
+
+Example: Repetition
+PyDataSet=[1,2]
+print(PyDataSet*4)#[1,2,1,2,1,2,1,2]
+
+Example : Membership
+PyDataSet=[1,2,3]
+print(1 in PyDataSet)#True
+
+Example: Iteration
+PyList=['Raju','Smith','Sara','Scott']
+for friend in PyList:
+    print("Say Hey : ",friend)
+
+How to Access elements from a list?
+There are various ways in which we can access the elements of a list.
+
+List Index
+We can use the index operator [] to access an item in a list. Index starts from 0. So, a list having 5 elements will have index from 0 to 4. The index must be an integer. Nested list are accessed using nested indexing.
+
+NOTE:
+We can't use float or other types, this will result into TypeError. 
+
+Example:
+PyList=["Big Data", "Hadoop", "Spark", "IoT"]
+Item	         Big Data	Hadoop	Spark	IoT
+Index (from left)	 0	 1	 2	 3
+Index (from right)	-4	-3	-2	-1
+
+Example:
+PyList = ['P','Y','T','H','O','N']
+print(PyList[0]) # P
+print(PyList[4]) # O
+print(PyList[-1]) # N
+
+Negative indexing
+Python allows negative indexing for its sequences. The index of -1 refers to the last item, -2 to the second last item and so on.
+
+Example:
+PyList=["Big Data", "Hadoop", "Spark", "IoT"]
+print(PyList[0])#Big Data
+print(PyList[0],PyList[3]) # Big Data IoT
+print(PyList[-1]) # IoT 
+print(PyList[4]) # Creates Error as the indices is out of range 
+
+Example:
+MyList=["PYTHON",1,2,3,["Machine"]]
+print(MyList)
+print(MyList[1])
+print(MyList[-2])
+print(MyList[-1][-1][-1])
+print(MyList[-1][-1][-3])
+print(MyList[-2])
+print(MyList[-5][-1])
+
+List Slices
+Lists can be sliced like strings and other sequences. We can access a range of items in a list by using the slicing operator (colon).
+
+Syntax :
+sliced_list = List_Name[StartIndex:EndIndex]
+
+Example:
+PyList=["Big Data", "Hadoop", "Spark", "IoT"] 
+print(PyList[0:2])   
+print(PyList[1:2]) 
+print(PyList[1:-2])  
+print(PyList[:3]) 
+print(PyList[:]) 
+
+How to use start,stop,step:
+listx=[1, 5, 7, 3, 2, 4, 6]  
+print(listx)  
+sublist=listx[2:7:2] #list[start:stop:step]   
+print(sublist)  
+sublist=listx[6:2:-1] #when step is negative the jump is made back print(sublist)  
+
+Example:
+listx=[1, 5, 7, 3, 2, 4, 6, 10, 11]  
+print(listx[7:1:-3])
+print(listx[2:7:2])
+print(listx[2:7])
+print(listx[:4])
+print(listx[3:])
+
+Double Slice Operator:
+PyList=[1,2,3,4,5,6,7,8,9,10]
+print(PyList)
+print(PyList[::1])
+print(PyList[::2])
+print(PyList[::3])
+print(PyList[::4])
+print(PyList[::-1])
+print(PyList[::-2])
+print(PyList[::-3])
+print(PyList[::-4])
+
+day 16
+
+
+Python List Methods
+In Python Scripting The following list of methods existed in List object. 
+1 append() 		2 extend() 		
+3 insert()			4 remove() 		
+5 pop() 			6 clear() 		
+7 index() 			8 count() 		
+9 sort() 			10 reverse() 		
+11 copy()
+
+append():Add an element to the end of the list
+
+Syntax:
+list.append(item)
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.append("PYTHON")  
+print(py_list)
+
+Example:
+alist = ['a', 'b', 'c']
+alist.append(['d', 'e','f'])
+print(alist)
+
+NOTE:We can Modify an element by using the index of the element
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list[0])  
+py_list[0]="DataScinece" 
+print(py_list)  
+print(py_list[0])  
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list[2]="PYTHON"
+print(py_list) 
+
+Example:
+PyList=["BigData"]
+print(PyList)
+PyList.append(("ML","BC"))
+print(PyList)
+PyList.append({"AI"})
+print(PyList)
+PyList.append({1:"PYTHON"})
+print(PyList)
+
+NOTE: A list can append with any Data Structure..!!
+
+extend(): Add all elements of a list to the another list
+
+Syntax:
+list.extend(iterable)
+
+Example:
+alist1 = ['a', 'b', 'c']
+alist1.extend(['d', 'e','f'])
+print(alist1)
+
+Python List insert()
+It inserts the element to the list at the given index.
+
+Syntax:
+list.insert(index, element)
+
+Parameters:
+index - position where element needs to be inserted
+element - this is the element to be inserted in the list
+
+Example:
+MyData = ['Big', 'Data', 'Hadoop', 'Spark']
+MyData.insert(2, 'TERADATA')
+print('Updated List: ', MyData)
+
+remove(): Remove an item from the list
+
+Syntax:
+list.remove(item)
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.remove("IoT")  
+print(py_list) 
+
+clear(): Removes all items from the list
+
+Syntax:
+list.clear()
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.clear()  
+print(py_list)  #Empty List Displayed
+
+index(): 
+It returns the index in the list of the first item whose value is x. 
+
+Syntax:
+list.index(item[,start][,end])
+
+Example:
+PyList=[1,2,3,1,4,5,2,5,6,1,4]
+print(PyList)
+print(PyList.index(2))
+print(PyList.index(2,2))
+print(PyList.index(1,2,7))
+print(PyList.index(4,3,9))
+
+Example:
+PyList=["Data","ML","DL","Data","ML"]
+print(PyList)#['Data','ML','DL','Data','ML']
+print(PyList.index("ML"))
+print(PyList.index("Data"))
+print(PyList.index("Data",1))
+print(PyList.index("ML",2,6))
+
+Example:
+listy = list("HELLO WORLD")  
+print(listy)  
+index = listy.index("L")
+print(index)  
+index = listy.index("L", 4)   
+print(index)  
+index = listy.index("O", 3, 5) 
+print(index) 
+
+count():
+It returns the count of number of items passed as an argument
+
+Syntax:
+list.count(item)
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT", "Hadoop"]  
+py_list.count("Hadoop")  
+
+sort():Sort the items of the list in place.
+
+Syntax:
+list.sort(reverse="True/False") By Default False
+
+NOTE:sort() doesn't supports mixed data lists..!!
+
+Example:
+PyList=["Big Data", "Hadoop", "Spark", "IoT","Big Data"]  
+print(PyList) #['Big Data','Hadoop','Spark','IoT','Big Data']
+PyList.sort()
+print(PyList)#['Big Data','Big Data','Hadoop','IoT','Spark']
+PyList.sort(reverse=True)
+print(PyList)#['Spark','IoT','Hadoop','Big Data','Big Data']
+
+NOTE: reverse - If true, the sorted list is reversed
+
+reverse(): Reverse the order of items in the list
+
+Syntax:
+list.reverse()
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.reverse()  
+print(py_list) 
+
+
+day 16 
+
+Python List Methods
+In Python Scripting The following list of methods existed in List object. 
+1 append() 		2 extend() 		
+3 insert()			4 remove() 		
+5 pop() 			6 clear() 		
+7 index() 			8 count() 		
+9 sort() 			10 reverse() 		
+11 copy()
+
+append():Add an element to the end of the list
+
+Syntax:
+list.append(item)
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.append("PYTHON")  
+print(py_list)
+
+Example:
+alist = ['a', 'b', 'c']
+alist.append(['d', 'e','f'])
+print(alist)
+
+NOTE:We can Modify an element by using the index of the element
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list[0])  
+py_list[0]="DataScinece" 
+print(py_list)  
+print(py_list[0])  
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list[2]="PYTHON"
+print(py_list) 
+
+Example:
+PyList=["BigData"]
+print(PyList)
+PyList.append(("ML","BC"))
+print(PyList)
+PyList.append({"AI"})
+print(PyList)
+PyList.append({1:"PYTHON"})
+print(PyList)
+
+NOTE: A list can append with any Data Structure..!!
+
+extend(): Add all elements of a list to the another list
+
+Syntax:
+list.extend(iterable)
+
+Example:
+alist1 = ['a', 'b', 'c']
+alist1.extend(['d', 'e','f'])
+print(alist1)
+
+Python List insert()
+It inserts the element to the list at the given index.
+
+Syntax:
+list.insert(index, element)
+
+Parameters:
+index - position where element needs to be inserted
+element - this is the element to be inserted in the list
+
+Example:
+MyData = ['Big', 'Data', 'Hadoop', 'Spark']
+MyData.insert(2, 'TERADATA')
+print('Updated List: ', MyData)
+
+remove(): Remove an item from the list
+
+Syntax:
+list.remove(item)
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.remove("IoT")  
+print(py_list) 
+
+clear(): Removes all items from the list
+
+Syntax:
+list.clear()
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.clear()  
+print(py_list)  #Empty List Displayed
+
+index(): 
+It returns the index in the list of the first item whose value is x. 
+
+Syntax:
+list.index(item[,start][,end])
+
+Example:
+PyList=[1,2,3,1,4,5,2,5,6,1,4]
+print(PyList)
+print(PyList.index(2))
+print(PyList.index(2,2))
+print(PyList.index(1,2,7))
+print(PyList.index(4,3,9))
+
+Example:
+PyList=["Data","ML","DL","Data","ML"]
+print(PyList)#['Data','ML','DL','Data','ML']
+print(PyList.index("ML"))
+print(PyList.index("Data"))
+print(PyList.index("Data",1))
+print(PyList.index("ML",2,6))
+
+Example:
+listy = list("HELLO WORLD")  
+print(listy)  
+index = listy.index("L")
+print(index)  
+index = listy.index("L", 4)   
+print(index)  
+index = listy.index("O", 3, 5) 
+print(index) 
+
+count():
+It returns the count of number of items passed as an argument
+
+Syntax:
+list.count(item)
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT", "Hadoop"]  
+py_list.count("Hadoop")  
+
+sort():Sort the items of the list in place.
+
+Syntax:
+list.sort(reverse="True/False") By Default False
+
+NOTE:sort() doesn't supports mixed data lists..!!
+
+Example:
+PyList=["Big Data", "Hadoop", "Spark", "IoT","Big Data"]  
+print(PyList) #['Big Data','Hadoop','Spark','IoT','Big Data']
+PyList.sort()
+print(PyList)#['Big Data','Big Data','Hadoop','IoT','Spark']
+PyList.sort(reverse=True)
+print(PyList)#['Spark','IoT','Hadoop','Big Data','Big Data']
+
+NOTE: reverse - If true, the sorted list is reversed
+
+reverse(): Reverse the order of items in the list
+
+Syntax:
+list.reverse()
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.reverse()  
+print(py_list) 
+
+
+
+17 day 
+
+Using Lists as Stacks
+A stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle
+
+pop():
+It is used to remove elements from right to left
+
+Syntax:
+list.pop()
+
+Example:
+py_list=["Big Data", "Hadoop", "Spark", "IoT"]  
+print(py_list)  
+py_list.append("DataScinece")  
+py_list.append("PYTHON")  
+print(py_list)  
+py_list.pop()  	
+py_list.pop()  
+print(py_list)
+
+Differences between remove() and pop()
+remove()
+1) We can use to remove specific element
+2) It never return any value.
+3) If element not existed  returns ' VALUE ERROR'
+
+pop()
+1) Remove last element from the List.
+2) It will return removed element.
+3) If List has no items then we get Error.
+
+Using Lists as Queues: It is a FIFO( First in First Out ) structure.
+A deque, also known as a double-ended queue, is an ordered collection of items similar to the queue. It is important to note that even though the deque can assume many of the characteristics of stacks and queues, it does not require the LIFO and FIFO orderings that are enforced by those data structures.
+
+Example:
+from collections import deque  
+py_list = deque(["Big Data", "Hadoop", "Spark", "IoT"])  
+py_list.append("DataScinece")      
+print(py_list)  
+py_list.append("PYTHON")     
+print(py_list)  
+py_list.popleft()            
+print(py_list)  
+py_list.popleft()         
+print(py_list)  
+
+Convert a list to a tuple in Python
+MyNumList=[1,2,3,4,5]
+print(type(MyNumList))
+print(MyNumList)
+tup=tuple(MyNumList)
+print(tup)
+print(type(tup))
+
+Compare two lists in Python
+PyList1=["Data","BigData","Hadoop"]
+print(PyList1)
+PyList2=["BigData","Hadoop","Data"]
+print(PyList2)
+print(PyList1==PyList2)
+PyList1.sort()
+PyList2.sort()
+print(PyList1==PyList2)
+
+Example:
+list=[]
+for i in range(10):
+    if i%2==1:
+        list.append(i)
+        print(list)
+
+Built-in Functions with List
+all()	any()		enumerate()	
+len()	list()		max()		
+min()	sum()		
+
+all() Function:
+It returns True when all elements in the given iterable are true. If not, it returns False.
+
+Syntax:
+all(iterable)
+
+all() Parameters
+iterable - any iterable (list, tuple, dictionary, etc.) which contains the elements
+
+The all() method returns:
+True - If all elements in an iterable are true
+False - If any element in an iterable is false
+
+Truth table for all()
+When				Return Value
+All values are true			True
+All values are false			False
+One value is true (others are false)	False
+One value is false (others are true)	False
+Empty Iterable			True
+
+NOTE: 0 and 1 are the binary values like False, True
+
+Example:How all() works for tuple and lists?
+s = [1, 3, 4, 5]
+print(all(s))
+
+s = [0, False]
+print(all(s))
+
+s = [0, False, 5]
+print(all(s))
+
+s = []
+print(all(s))
+
+Python any()
+It Returns True if any element of an iterable is true. If not, this method returns False.
+
+Syntax:
+any(iterable)
+
+The any method returns:
+True if at least one element of an iterable is true
+False if all elements are false or if an iterable is empty
+
+When				Return Value
+All values are true			True
+All values are false			False
+One value is true (others are false)	True
+One value is false (others are true)	True
+Empty Iterable			False
+
+NOTE: 0 and 1 are the binary values like False, True
+
+Example:
+s =[1, 3, 4, 0]
+print(any(s))
+
+s = [0, False]
+print(any(s))
+
+s = [0, False, 5]
+print(any(s))
+
+s = []
+print(any(s))
+
+Python enumerate()
+It adds counter to an iterable and returns it (the enumerate object).
+
+Syntax 
+enumerate(iterable, start=0)
+
+Parameters:
+iterable: A sequence, an iterator, or objects that supports iteration
+
+start(optional): It starts counting from this number. If start is omitted, 0 is taken as start.
+
+How enumerate() works in Python?
+BigData=['Big Data', 'Hadoop', 'Spark','Data Science']
+eData = enumerate(BigData)
+print(type(eData))
+print(list(eData))
+
+Looping Over an Enumerate object
+bd = ['Big Data', 'Hadoop', 'Spark','Data Science']
+for item in enumerate(bd):
+  print(item)
+
+Example:
+bd = ['Big Data', 'Hadoop', 'Spark','Data Science']
+for count, item in enumerate(bd):
+  print(count, item)
+
+Example:
+bd = ['Big Data', 'Hadoop', 'Spark','Data Science']
+for count, item in enumerate(bd, 100):
+  print(count, item)
+
+Example:
+names = ['Bob', 'Alice', 'Guido']
+print(list(enumerate(names)))
+
+Example:
+names = ['Bob', 'Alice', 'Guido']
+for index, value in enumerate(names):
+    print(f'{index}: {value}')
+
+len() Function:
+It displays length of characters in numeric format.
+
+Syntax:
+len(iterable)
+
+Example:
+PyList=[1,2,3,4,5]
+print(len(PyList))
+
+list():
+It is converting into list data type.
+
+Syntax:
+list(iterable)
+
+Example:
+PyStr="Hello"
+print(list(PyStr)) #['H', 'e', 'l', 'l', 'o']
+
+max():
+It is used to display max character based on ASCII or Unicode Value
+
+Syntax:
+max(iterable)
+
+Example:
+print(max(1,2,3,4))
+print(max('a','b','c','d','E'))
+
+min()	
+It is used to display min character based on ASCII or Unicode value.
+
+Syntax:
+min(iterable)
+
+
+18 day  
+
+List_of_Lists
+A=[[1]*2]*5
+print(A)
+B=[[2,0]*1]*4
+print(B)
+
+List shortcuts
+Fives = [5]*4
+print(Fives)
+
+Example:
+PyList=[1,[2,[3,[4,[5]]]]]
+print(PyList[0])
+print(PyList[1][0])
+print(PyList[1][1][0])
+
+Example:
+A=[1,[2,[3,[4,[5]]]]]
+print(A)
+print(A[0])
+print(A[1])
+print(A[1][0])
+print(A[1][1])
+print(A[1][1][1][1])
+print(A[1][1][1][1][0])
+
+Example:
+A=[1,[2,[3,[4,[5]]]]]
+print(A[-1])
+print(A[-1][-2])
+print(A[-1][-1])
+
+List comprehension
+In this method, we basically define the process through which the list needs to be created. We specify what operation needs to be done and on what elements it needs to done.
+
+Syntax:	
+[expression for item in iterable]
+
+Example:
+result=[x**2 for x in [3,4,5]]
+print(result)
+
+Example:
+result= [x for x  in range(1,11) if x%2==0]
+print(result)
+result= [x for x  in range(1,11) if x%2!=0]
+print(result)
+
+Syntax:
+[expression if conditional else stmt for item in iterable]
+
+Example:
+print([x if x>3 else x+1 for x in [1,2,3,4,5,6]])#[2, 3, 4, 4, 5, 6]
+print([x if x>3 else x+3 for x in [1,2,3,4,5,6]])#[4, 5, 6, 4, 5, 6]
+print([x if x<3 else x+3 for x in [1,2,3,4,5,6]])#[1, 2, 6, 7, 8, 9]
+
+Example:
+num=[1,2,3,4]
+result=[x*10 for x in num]
+print(result)
+
+Example:
+Str1="Hello12345"
+result=[x for x  in Str1 if x.isdigit()]
+print(result)
+result=[x for x  in Str1 if x.isalpha()]
+print(result)
+Example:
+words=['Hello',"Hai",'python']
+result=[x.upper() for x in words]
+print(result)
+
+Example:
+Sample_List = ["Sample", "List"]
+Result = [item[0] for item in Sample_List]
+print(Result)
+
+Example:
+a=[1,2,3,4,5,6]
+b=[2,3]
+result=[x+y for x in a for y in b]
+print(result )
+
+
+Day 19
+
+
+Differences between Hardcopy, shallowCopy and DeepCopy in python (Copy or Clone)
+
+Hard Copy an Object in Python
+In Python, we use = operator to create a copy of an object. You may think that this creates a new object; it doesn't. It only creates a new variable that shares the reference of the original object.
+
+Example:
+myList=[1,2,3,4,5,6]
+print(myList)    #[1, 2, 3, 4, 5, 6]
+yourList=myList 
+print(yourList)  # [1, 2, 3, 4, 5, 6]
+myList[0]="NareshIT"
+print(myList)    #['NareshIT', 2, 3, 4, 5, 6]
+print(yourList)  #['NareshIT', 2, 3, 4, 5, 6]
+
+In Python, there are two ways to create copies:
+1 Shallow Copy or COPY
+2 Deep Copy
+
+Copy Module
+We use the copy module of Python for shallow and deep copy operations. Suppose, you need to copy the compound list say x.
+
+Example:
+import copy
+print(dir(copy))
+
+Shallow Copy (copy.copy())
+A shallow copy creates a new object which stores the reference of the original elements. So, a shallow copy doesn't create a copy of nested objects, instead it just copies the reference of nested objects. This means, a copy process does not recurse or create copies of nested objects itself.
+
+Example:
+import copy
+myList=[1,2,3,4,5,6]
+print(myList)
+yourList=myList
+print(yourList)
+myList=copy.copy(yourList)
+myList[4]="PYTHON"
+print(myList)
+print(yourList)
+
+Example:
+import copy
+old_list = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+new_list = copy.copy(old_list)
+old_list.append([4, 4, 4])
+print("Old list:", old_list)
+print("New list:", new_list)
+
+Deep Copy (copy.deepcopy())
+A deep copy creates a new object and recursively adds the copies of nested objects present in the original elements.
+
+Example:
+import copy
+yourList=[1,2,3,4,['a','b','c']]
+myList=copy.deepcopy(yourList)
+myList[4][1]="Hello"
+print(myList)
+print(yourList)
+
+zip() in Python
+The purpose of zip() is to map the similar index of multiple containers so that they can be used just using as single entity. Python Zip and Unzip lists, tuples.
+
+Syntax :
+zip(*iterators)
+
+Parameters : Python iterables or containers ( list, string etc )
+Return Value :
+Returns a single iterator object, having mapped values from all the containers.
+
+Example:
+PyList1=["Hadoop","Spark","PYTHON","DataScience"]
+PyList2=["Bigdata","Teradata","Pandas","SKLearn"]
+z1=zip(PyList1,PyList2)
+print(list(z1))
+
+Example:
+Pylist1=[1,2]
+Pylist2=[2,3]
+ziplist=zip(Pylist1,Pylist2)
+ziptuple=zip(Pylist1,Pylist2)
+zipset=zip(Pylist1,Pylist2)
+zipdict=zip(Pylist1,Pylist2)
+print(list(ziplist))
+print(tuple(ziptuple))
+print(set(zipset))
+print(dict(zipdict))
+
+Example:
+PyList1=["Hadoop","Spark","PYTHON","DataScience"]
+PyList2=["Bigdata","Teradata","Pandas","SKLearn"]
+for l1,l2 in zip(PyList1,PyList2):
+    print(l1,l2)
+
+Example:
+PyList1=["Hadoop","Spark","PYTHON","DataScience"]
+PyList2=["Bigdata","Teradata","Pandas","SKLearn"]
+Dict_Zip=dict(zip(PyList1,PyList2))
+print(Dict_Zip)
+
+Example:
+PyList1=[10,20,30,40]
+PyList2=[50,60,70,80]
+for a,b in zip(PyList1,PyList2):
+    print('{} + {}={}'.format(a,b,a+b))
+
+How to unzip?
+Unzipping means converting the zipped values back to the individual self as they were. This is done with the help of “*” operator.
+
+Example:
+PyList1=["Hadoop","Spark","PYTHON","DataScience"]
+PyList2=["Bigdata","Teradata","Pandas","SKLearn"]
+z1=zip(PyList1,PyList2)
+z2=zip(*z1)
+print(*z2)
+
+Difference between del and None Keywords:
+del
+The variable will be removed and we cannot access that variable(unbind operation)
+
+Example:
+PyStr="PYTHON"	
+del PyStr	
+print(PyStr)#NameError: name 'PyStr' is not defined.
+
+None:
+None assignment the variable will not be removed but the corresponding object is eligible for Garbage Collection(re-bind operation).
+
+Example:
+PyStr="PYTHON"	
+print(PyStr)#PYTHON
+PyStr=None	
+print(PyStr)#None  
+
+
+
+day 20 
+
+Line charts:
+You can use Matplotlib to create a line chart with Python. Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension numpy.  This takes only a few lines:
+
+Example:
+import matplotlib.pyplot as plt
+x = [1,2,3,4,5,7,9,13,15,17,18,19,20]
+plt.plot(x)
+plt.xlabel('Sunlight')
+plt.ylabel('Time')
+plt.show()
+
+Example2:
+import matplotlib.pyplot as plt
+x = [1,2,3,4,5,7,9,13,15,17,18,19,20]
+plt.plot(x, 'ro-')
+plt.xlabel('Sunlight')
+plt.ylabel('Time')
+plt.show()
+
+We create a red graph with dots, where the r in ‘ro-‘ indicates red. Changing this to ‘bo-‘ would create a blue dotted line. If you only want to display the dots, use ‘ro’ or ‘bo’ instead.
+
+WORKING WITH PYTHON ARRAYS
+It is the collection of elements of a single data type, eg. array of int, array of string. In Python, there is no native array data structure. So, we use Python lists instead of an array.
+
+Create an Array
+We can create a Python array with comma separated elements between square brackets[].
+
+How to create an array in Python?
+We can make an integer array and store it to arr.
+PyArr = [10, 20, 30, 40, 50]
+
+Access elements of an Array
+We can access individual elements of an array using index inside square brackets [].
+
+Array Index
+Index is the position of element in an array. In Python, arrays are zero-indexed. This means, the element's position starts with 0 instead of 1.
+
+Example: Accessing elements of array using indexing
+PyArr = [10, 20, 30, 40, 50]
+print(PyArr[0])#10
+print(PyArr[1])#20
+print(PyArr[2])#30
+
+Find length of an Array
+Python arrays are just lists, so finding the length of an array is equivalent to finding length of a list in Python.
+
+Example: 
+PyBrands=["Coke", "Apple", "Google", "Microsoft", "Toyota"]
+NumBrands=len(PyBrands)
+print(NumBrands)
+
+Slicing of an Array
+Python has a slicing feature,It allows to access pieces of an array. [x : y]
+
+Example:
+PyFruits=["Apple", "Banana", "Mango", "Grapes", "Orange"]
+print(PyFruits[1:4])
+print(PyFruits[ :3])
+print(PyFruits[-4:])
+print(PyFruits[-3:-1])
+
+Multi-Dimensional Arrays
+It is an array within an array. This means an array holds different arrays inside it.
+
+Example: 
+MultArr = [[1,2], [3,4], [5,6], [7,8]]
+print(MultArr[0])#[1,2]
+print(MultArr[3])#[7,8]
+print(MultArr[2][1])#6
+print(MultArr[3][0])#7
+
+Python Matrix
+A matrix is a two-dimensional data structure. In python, matrix is a nested list. 
+
+Example:
+PyArr=[['Roy',80,75,85,90,95],
+     ['John',75,80,75,85,100],
+     ['Dave',80,80,80,90,95]]
+print(PyArr[0])
+print(PyArr[0][1])
+print(PyArr[1][2])
+print(PyArr[2][2])
+
+
+WORKING  WITH PYTHON TUPLE DATA STRUCTURE
+Tuple is readonly List
+OR
+It is a collection that cannot be modified. A tuple is defined using parenthesis.
+
+Advantages of Tuple over List
+1 We generally use tuple for heterogeneous (different) datatypes and list for homogeneous (similar) datatypes.
+2 Since tuple are immutable, iterating through tuple is faster than with list.
+3 Tuples that contain immutable elements can be used as key for a dictionary. With list, this is not possible.
+
+More About Tuple:
+1.You can't add elements to a tuple. 
+2.You can't remove elements from a tuple.
+
+How to Create a tuple?
+To create a tuple, just list the values within parenthesis separated by commas. 
+
+Creating Empty Tuple:
+PyTuple = ()
+print(type(PyTuple))#<class 'tuple'>
+print(PyTuple)#()
+
+Creating tuple having integers
+PyTuple=(1, 2, 3)
+print(type(PyTuple))#<class 'tuple'>
+print(PyTuple)#(1, 2, 3)
+
+Creating a tuple with mixed datatypes
+PyTuple = (1, "Data Science", 3.4)
+print(type(PyTuple))#<class 'tuple'>
+print(PyTuple)#(1, 'Data Science', 3.4)
+
+Creating a Nested tuple
+PyTuple=("Data Science", (8, 4, 6), (1, 2, 3))
+print(type(PyTuple))#<class 'tuple'>
+print(PyTuple)#('Data Science', (8, 4, 6), (1, 2, 3))
+
+Tuple Packing.
+Creating tuple without parentheses, also called tuple packing.
+PyTuple = 3, 4.6, "Data Science"
+print(type(PyTuple))#<class 'tuple'>
+print(PyTuple)#(3, 4.6, 'Data Science')
+#Tuple Unpacking is also possible
+a, b, c = PyTuple
+print(a);print(b);print(c)
+
+NOTE:
+while packing or Unpacking of the tuple :
+
+if a value is more, it dislays "Value Error",
+if a variable is more, it displays "not enough values"
+
+Creating a tuple with one element is a bit tricky.
+Having one element within parentheses is not enough. We will need a trailing comma to indicate that it is in fact a tuple.
+
+Example:
+PyTuple = ("Data Science")
+
+print(type(PyTuple)) #<class 'str'>
+PyTuple = ("Data Science",)  
+
+print(type(PyTuple))#<class 'tuple'>
+PyTuple = "Data Science",
+
+print(type(PyTuple)) #<class 'tuple'>
+
+Example: #List Inside Tuple
+MyTuple=('a',[1,2])
+print(type(MyTuple))
+print(MyTuple[0]) # a
+print(MyTuple[1]) #[1,2]
+print(MyTuple[1][1]) # 2
+MyTuple[1][1]='4'  
+print(MyTuple) # ('a',[1,2])
+
+Example:
+PyTuple=(1,2,3,[4,5])
+print(type(PyTuple))#<class 'tuple'>
+print(PyTuple[0])#1
+print(PyTuple[3])#[4, 5]
+print(PyTuple[3][0])#4
+PyTuple[3][0]=40
+print(PyTuple[3])#[40, 5]
+print(PyTuple[3][1])#5
+PyTuple[0]=100
+print(PyTuple)
+#TypeError: 'tuple' object does not support item assignment
+  
+
+
+day 21 
+
+﻿Python Tuple Methods:
+Tuple object supports the following list of Methods:
+Method	Description
+count(x)	Return the number of items that is equal to x
+index(x)	Return index of first item that is equal to x
+
+In Python how to know the number of times an item has repeated
+PyTuple = 2, 4, 5, 6, 2, 3, 4, 4, 7   
+print(PyTuple)  
+print(PyTuple.count(4))
+print(PyTuple.count(7))
+print(PyTuple.count(5))
+
+Find the index of an item of the tuple:
+PyTuple=tuple("index tuple")   
+print(PyTuple)
+print(PyTuple.index("p"))
+print(PyTuple.index("e", 5))
+print(PyTuple.index("e", 3, 6))
+
+Add item in tuple!
+Method-I
+tuplez = (4, 6, 2, 8, 3, 1)   
+print(tuplez)  
+tuplez = tuplez + (9,)  
+print(tuplez) 
+
+Method-II
+tuplez = (4, 6, 2, 8, 3, 1)   
+print(tuplez)  
+listx = list(tuplez)
+listx.append(30)  
+tuplez = tuple(listx)  
+print(tuplez)
+
+Example:
+PyTuple=(1,2,3,4)
+PyTuple.append((5,6,7))
+print(len(PyTuple))
+
+Deleting a Tuple:
+We cannot change the elements in a tuple. That also means we cannot delete or remove items from a tuple. But deleting a tuple entirely is possible using the keyword del.
+
+Example:
+PyTuple=('P','Y','T','H','O','N','S','C','R')
+del PyTuple
+print(PyTuple) #NameError: name 'PyTuple' is not defined
+
+Example:
+Remove an item from a tuple (Through List)
+PyTuple="P", "Y", "T", "H", "O", "N", "S"   
+PyList=list(PyTuple)
+PyList.remove("P")   
+PyTuple=tuple(PyList)
+print(PyList)#['Y', 'T', 'H', 'O', 'N', 'S']
+print(Pytuple)
+
+
+Python Sets
+SET is an unordered collection of unique elements
+
+How to create a set?
+1 Insertion order is not preserved.But we can sort the elements.
+2 Indexing and slicing not allowed for the set.
+3 Heterogeneous elements are allowed.
+4 We can represent set elements within curly braces and with comma seperation
+5 We can apply mathematical operations like union,intersection,difference etc 
+
+There are currently two built-in set types:
+1 set ==> The set type is mutable
+2 frozenset. ==> It is immutable and hashable 
+
+Example:
+FruitBasket={"Apple","Mango","orange","banana","Apple","Mango"}
+print(type(FruitBasket))#<class 'set'>
+print(Fruit_Basket)#{'Apple','ornage','Mango','banana'}
+
+Example:
+We should not use empty curly brackets, treat as dict.!
+PySet={}
+print(type(PySet)) #<class 'dict'>
+
+Set not allowed duplicates but list allows:
+Numbers=[1,2,3,4,1,2,3,4,5]
+UniqueNumbers=set(Numbers)
+print(UniqueNumbers) #{1,2,3,4,5}
+
+Iteration Over Sets
+We can move over each of the items in a set using a loop. However, since sets are unorded
+
+Example:
+NumSet = set([0, 1, 2, 3, 4, 5])  
+for n in NumSet:  
+  print(n)  
+
+Different Python Set Methods
+1 add()			2 clear()		
+3 copy()			4 difference()	
+5 difference_update() 	6 discard()		
+7 intersection()		8 intersection_update()	
+9 isdisjoint()		10 issubset()		
+11 issuperset()		12 pop()		
+13 remove()		14 symmetric_difference() 
+15 symmetric_difference_update()
+16 union()		17 update()
+
+Python Set add():
+It adds a given element to a set. If the element is already present, it doesn't add that element.
+
+Syntax:
+set.add(elem)
+
+Example:
+PySet={}
+print(PySet)
+PySet.add(1)
+print(PySet)#AttributeError: 'dict' object has no attribute 'add'
+
+Example:
+PySet={1}
+print(PySet)#{1}
+PySet.add(1)
+print(PySet)#{1}
+
+Example:
+PySet={1}
+print(PySet)
+PySet.add(1,2)
+print(PySet)
+#TypeError: add() takes exactly one argument (2 given)
+
+Example:
+PySet={1}
+print(PySet)
+PySet.add([1,2])
+print(PySet)
+#TypeError: unhashable type: 'list'
+
+Example:
+PySet={1}
+print(PySet)#{1}
+PySet.add((1,2))
+print(PySet)#{(1, 2), 1}
+
+clear():
+It is used to clear all elements from a set.
+
+Syntax:
+set.clear()
+
+Example:
+PySet={1}
+print(PySet)#{1}
+PySet.clear()
+print(PySet)#set()
+
+
+day 22
+
+﻿Python Set update():
+It adds elements from a set to the set.
+OR
+A |= B or A.update(B)
+Adds all elements of array B to the set A. 
+
+Syntax
+A.update(B)
+
+NOTE:  
+A and B are two sets. The elements of set B are added to the set A.
+
+Example:
+DataSet=set() 
+DataSet.update(["Data Science", "Big Data"])  
+print(DataSet) 
+
+Example:
+A={10,20,30}; B=[40,50,60,10]
+A.update(B,range(5))
+print(A)#{0, 1, 2, 3, 4, 40, 10, 50, 20, 60, 30}
+
+Python Set pop()
+It removes an arbitrary element from the set and returns the element removed.
+
+Syntax:
+set.pop()
+
+Example:
+A ={'a', 'b', 'c', 'd'}
+print('Return Value is', A.pop())
+print(A)
+
+Example:
+NumSet = set([0, 1, 2, 3, 4, 5])  
+NumSet.pop()  
+print(NumSet)  
+NumSet.pop()  
+print(NumSet) 
+
+Python Set remove()
+It searches for the given element in the set and removes it, but not a member of the set, a KeyError will be raised.
+
+Syntax:
+set.remove(element)
+
+Example:
+NumSet = set([0, 1, 2, 3, 4, 5])  
+NumSet.remove(0)  
+print(NumSet)  
+
+Trying to Delete Element That Doesn't Exist
+Example:
+PyPets = {'cat', 'dog', 'rabbit'}
+PyPets.remove('cow')
+print(PyPets)#KeyError
+
+Python Set discard()
+An element will be removed from the set, if it is contained in the set. If not a member of the set, nothing will be done.
+
+Syntax:
+s.discard(x)
+
+Example:
+NumSet = set([0, 1, 2, 3, 4, 5])  
+NumSet.discard(3)  
+print(NumSet)  
+
+Example:
+PyNums={2, 3, 4, 5}
+PyNums.discard(3)
+print(PyNums)
+PyNums.discard(10)
+print(PyNums)
+
+intersection(s) (AND)
+A set with all the elements which are contained in both sets is returned.
+
+Syntax:
+set1.intersetction(set2)
+
+Example:
+x = {"a","b","c","d","e"}
+y = {"c","d","e","f","g"}
+print(x.intersection(y))
+print(x & y) #ampersand operator "&":
+
+A &= B or A.intersection_update(B) 
+The intersection of two or more sets is the set of elements which are common to all sets.
+
+Sytnax:
+A.intersection_update(*Other_sets) or (&=)
+
+Example:
+A = {1, 2, 3, 4}
+B = {2, 3, 4, 5}
+A.intersection_update(B)
+print(A)#{2, 3, 4}
+print(B)#{2, 3, 4, 5}
+
+Union of sets (OR)
+A | B or  A.union(B) 	Returns a set which is the union of sets A and B. 
+
+Syntax:
+set1.union(set2)
+
+Example:
+PySetx=set(["Big Data", "Data Science"])  
+PySety=set(["Data Science", "Spark"])  
+PySeta = PySetx |PySety  #Union
+print (PySeta)  
+
+Set difference() In set1  but not set2
+
+Syntax
+A.difference(B)
+
+Example:
+A = {1, 2, 3, 4}
+B = {2, 3, 9}
+print(A.difference(B))#{1,4} # Equivalent to A-B
+print(B.difference(A))#{9} # Equivalent to B-A
+
+Example:
+A = {'a', 'b', 'c', 'd'}
+B = {'c', 'f', 'g'}
+print(A.difference(B))# Equivalent to A-B # 
+print(B.difference(A))# Equivalent to B-A
+
+A -= B or A.difference_update(B) 
+Removes all elements of B from the set A. 
+
+Syntax:
+A.difference_update(B)
+
+Example:
+A = {'a', 'c', 'g', 'd'}
+B = {'c', 'f', 'g'}
+A.difference_update(B)
+print(A)#{'d', 'a'}
+
+Set symmetric_difference() (XOR)
+It returns a new set which is the symmetric difference of two sets. The symmetric difference of two sets A and B is the set of elements which are in either of the sets A or B but not in both. (A-B)UNION(B-A)
+
+Syntax:
+A.symmetric_difference(B) 
+
+Example:
+A = {'a', 'b', 'c', 'd'}
+B = {'c', 'd', 'e' }
+print(A.symmetric_difference(B))
+print(B.symmetric_difference(A))
+
+Example:
+PySetx=set(["Big Data", "Data Science"])  
+PySety=set(["Data Science", "Spark"])  
+PySetc=PySetx.symmetric_difference(PySety)
+print(PySetc)
+PySetd=PySetx^PySety
+print(PySetd)
+
+A ^= B or  A.symmetric_difference_update(B) 
+Writes in A the symmetric difference of sets A and B. 
+
+Syntax:
+A.symmetric_difference_update(B)
+
+Example:
+A = {'a', 'c', 'd'}
+B = {'c', 'd', 'e' }
+A.symmetric_difference_update(B)
+print(A)
+
+Set issuperset(): set1 contains set2
+
+Syntax:
+A.issuperset(B) or A >= B 
+
+Example:
+A = {1, 2, 3, 4, 5}
+B = {1, 2, 3}
+C = {1, 2, 3}
+print(A.issuperset(B)) 
+print(B.issuperset(A)) 
+print(C.issuperset(B)) 
+
+Set issubset() set2 contains set1
+
+Syntax:
+A.issubset(B) or A <= B 
+
+Example:
+A = {1, 2, 3, 4, 5}
+B = {1, 2, 3}
+C = {1, 2, 3}
+print(A.issubset(B))
+print(B.issubset(A))
+print(C.issubset(B))
+
+isdisjoint()
+It returns True, if two sets have a null intersection.
+
+Syntax:
+set_a.isdisjoint(set_b)
+
+Example:
+A = {1, 2, 3, 4}
+B = {5, 6, 7}
+C = {4, 5, 6}
+print(A.isdisjoint(B))
+print(A.isdisjoint(C))
+
+Set copy(): It returns a shallow copy of the set.
+
+Syntax:
+set.copy()
+
+Example:
+PySetx = set(["Big Data", "Data Science"])  
+PySetd = PySetx.copy()  
+print(PySetd)  
+
+Special Operators with set (Membership operators)
+x={"a","b","c","d","e"}
+print("a" in x)
+print("d" in x)
+
+Iterations with for loop:
+x={"a","b","c","d","e"}
+for i in x:
+    print(i)
+
+Built-in Functions with Set
+all()	any()		enumerate()	len()		
+max()	min()		sorted()		
+
+Example:
+PySet={4,5,8,2.2}
+print(PySet)#{8, 2.2, 4, 5}
+print(sorted(PySet))#[2.2, 4, 5, 8]
+
+Python Frozenset
+It is a new class that has the characteristics of a set, but its elements cannot be changed once assigned. While tuples are immutable lists, frozensets are immutable sets. Frozensets can be created using the function frozenset().
+
+Syntax:
+PyFSet=frozenset(iterable)
+
+Example:
+PyFSet=frozenset([1,2,3,4])
+print(type(PyFSet))#<class 'frozenset'>
+print(PyFSet)#frozenset({1, 2, 3, 4})
+PyFSet=frozenset({1,2,3,4})
+print(type(PyFSet))#<class 'frozenset'>
+print(PyFSet)#frozenset({1, 2, 3, 4})
+PyFSet=frozenset((1,2,3,4))
+print(type(PyFSet))#<class 'frozenset'>
+print(PyFSet)#frozenset({1, 2, 3, 4})
+PyFSet=frozenset({1:"ONE",4:"ML"})
+print(type(PyFSet))#<class 'frozenset'>
+print(PyFSet)#frozenset({1, 4})
+
+
+Array
+It is the collection of elements of a single data type
+
+Example:
+PyArray=[1,2,3,4,5,6]
+PyArray=["Hello","Hei","PYTHON"]
+
+Linked List :  
+A linked list is a linear collection of data elements.
+32 ==> 15 ==> 36 ==> 56 ==> 24
+
+Advantages over arrays
+1) Dynamic size
+2) Ease of insertion/deletion
+
+Limitations:
+1 Access Very Slow
+2 No Index to access
+3 We sholud travel sequentially 
+
+To avoid the above limitations, Hash table introduced...!!
+
+What is Hash Table?
+A hash table (hash map) is a data structure which implements an associative array abstract data type.
+
+Ele % Size=Location (Mod means remainder)
+32 % 5=2
+15 % 5=0
+36 % 5=1
+56 % 5=1
+24 % 5=4
+
+PYTHON HASHING (HASH TABLES AND HASHLIB)
+What is Hash Table?
+Hash Table is a data structure which stores data in an associative manner. In a hash table, data is stored in an array format.
+OR
+1 Hash Tables or Hashmap
+2 It is a set of key-value Pairs
+3 No Duplicate keys
+4 Also Called as dictionary, map, hash table, associative array
+5. In PYTHON use dict keyword or dict() Method.
+
+Components of Hashmap:
+Array ==> Data structure used to store the data
+Hash function ==> function to convert key into an array index
+Collision Handling==> Multiple key value pairs Map the same cell of an Array.
+
+Basic Operations:
+I. Search	II. Insert 	III. delete
+
+Hash Function:
+index=len(key)-1
+
+Key-Value
+Beans-1.85
+Corn-2.38
+Rice-1.92
+
+A better Hash function in PYTHON
+index=sum(ASCII value for each letter in key)%Size
+
+day 23
+
+﻿Python Dictionaries
+A dictionary is a sequence of items. Each item is a pair made of a key and a value. Dictionaries are not sorted. 
+
+Why Dictionary?
+1 Dictionaries are Python’s most powerful data collection
+2 Dictionaries allow us to do fast database-like operations in Python
+3 Associative Arrays - PERL / PHP, HashMap - Java, Property Bag - C# / .Net
+
+How to create a dictionary?
+Creating a dictionary is as simple as placing items inside curly braces {} separated by comma. An item has a key and the corresponding value expressed as a pair, key: value.
+
+Create a new Dictionary in Python:
+#Empty dictionary
+PyDict = {}
+print(type(PyDict))#<class 'dict'>
+print(PyDict)#{}
+
+#Dictionary with integer keys
+PyDict = {1: "Bigdata", 2: "Hadoop"}
+print(type(PyDict))#<class 'dict'>
+print(PyDict)#{1:'Bigdata',2:'Hadoop'}
+
+#Dictionary with mixed keys
+PyDict={'name': 'NareshIT', 1: [2, 4, 3]}
+print(type(PyDict))#<class 'dict'>
+print(PyDict)#{'name':'NareshIT',1:[2,4,3]}
+
+Using dict Keyword:
+PyDict=dict({1:'Bigdata', 2:'Hadoop'})
+print(type(PyDict))#<class 'dict'>
+
+# from sequence having each item as a pair
+PyDict=dict([(1,'Bigdata'), (2,'Hadoop')])
+print(type(PyDict))#<class 'dict'>
+
+Add key/value to a dictionary in Python
+PyDict={1:"Hadoop"}
+print(PyDict)#{1: 'Hadoop'}
+PyDict[2]="Spark"
+print(PyDict)#{1: 'Hadoop', 2: 'Spark'}
+PyDict[1]="H2O"
+print(PyDict)#{1: 'H2O', 2: 'Spark'}
+
+Comparing Lists and Dictionaries:
+Dictionaries are like lists except that they use keys instead of numbers to look up values.
+
+Pic:List_Dict
+
+Example:
+lst = list()
+lst.append(21)
+lst.append(183)
+print(lst)
+lst[0] = 23
+print(lst)
+
+Key		Value
+[0]		23
+[1]		183
+
+Example:
+dic = dict()
+dic['exp'] = 14
+dic['course'] = 'Python'
+print(dic)
+dic['exp'] = 15
+print(dic)
+
+Dictionary
+Key		Value
+['course']		'PYTHON'
+['Exp']		14
+
+Python Dictionary Methods
+1 clear()			2 copy()		
+3 fromkeys(seq[, v])		4 get(key[,d])	
+5 items()			6 keys()		
+7 pop(key[,d])		8 popitem()		
+9 update([other])		10 values()		
+
+clear()		
+It is used to clear all keys and values from a dictionary.
+
+Syntax:
+dict.clear()
+
+Example:
+PyDict={1: 'PYDOOP', 2: 'Spark', 3: 'PYTHON'}
+print(PyDict)#{1: 'PYDOOP', 2: 'Spark', 3: 'PYTHON'}
+PyDict.clear()
+print(PyDict)#{}#empty dictionary
+
+copy()		
+It is used to create duplicate dictionary or shallow dictionary
+
+Syntax:
+dict.copy()
+
+Example:
+PyDict={1: 'PYDOOP', 2: 'Spark', 3: 'PYTHON'}
+print(PyDict)#{1: 'PYDOOP', 2: 'Spark', 3: 'PYTHON'}
+PyDict1=PyDict.copy()
+print(PyDict1)#{1: 'PYDOOP', 2: 'Spark', 3: 'PYTHON'}
+
+The fromkeys() method 
+It creates a new dictionary from the given sequence of elements with a value provided by the user.
+
+Syntax:
+dictionary.fromkeys(sequence[, value])
+
+fromkeys() Parameters
+sequence - sequence of elements which is to be used as keys for the new dictionary
+
+value (Optional) - value which is set to each each element of the dictionary
+
+Example:
+keys = {'a', 'e', 'i', 'o', 'u' }
+vowels = dict.fromkeys(keys)
+print(vowels)
+
+Example:
+keys = {'a', 'e', 'i', 'o', 'u' }
+value = 'vowel'
+vowels = dict.fromkeys(keys, value)
+print(vowels)
+
+Dictionary get()
+It returns the value for the specified key if key is in dictionary.
+
+Syntax:
+dict.get(key[, value]) 
+
+get() Parameters
+key - key to be searched in the dictionary
+value (optional) - Value to be returned if the key is not found. The default value is None.
+
+Example:
+person = {'name': 'NareshIT', 'Exper': 15}
+print('Name: ', person.get('name'))
+print('Exper: ', person.get('Exper'))
+print('Salary: ', person.get('salary'))
+print('Salary: ', person.get('salary', '$100000'))
+
+Example:
+PyDict={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+print(PyDict)#{'a': 'BigData', 'b': 'Data Science', 'c': 'PTYHON'}
+print(PyDict.get('a'))#BigData
+print(PyDict.get('d'))#None
+PyDict['d']="Machine Learning"
+print(PyDict.get('d'))#Machine Learning
+
+Dictionary items()
+It returns a view object that displays a list of dictionary's (key, value) tuple pairs.
+
+Syntax:
+dictionary.items()
+
+Example:
+PyDict={ 'Apple': 5, 'Orange': 4, 'Grapes': 2 }
+print(PyDict.items())
+
+Dictionary update()
+It  updates the dictionary with the elements from the another dictionary object or from an iterable of key/value pairs.
+
+Syntax:
+dict.update([other])
+
+Example:
+d = {1: "one", 2: "three"}
+d1 = {2: "two"}
+d.update(d1)
+print(d)
+
+Example:
+PyDict1={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+PyDict2={'d':"Machine Learning",'e':"Deep Learning",'f':"Artificial Intelligence"}
+PyDict1.update(PyDict2)
+print(PyDict1)# {'a': 'BigData', 'b': 'Data Science', 'c': 'PTYHON', 'd': 'Machine Learning', 'e': 'Deep Learning', 'f': 'Artificial Intelligence'}
+
+Dictionary keys()
+It  returns a view object that displays a list of all the keys in the dictionary
+
+Syntax:
+dict.keys()
+
+Example:
+person = {'name': 'NareshIT', 'age': 15, 'salary': '$35000.0'}
+print(person.keys())
+empty_dict = {}
+print(empty_dict.keys())
+
+Example:
+PyDict1={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+PyDict2={'d':"Machine Learning",'e':"Deep Learning",'f':"Artificial Intelligence"}
+print(PyDict1.keys())#dict_keys(['a', 'b', 'c'])
+print(PyDict2.keys())#dict_keys(['d', 'e', 'f'])
+
+Example:
+person = {'name': 'NareshIT', 'age': 15, }
+print('Before dictionary is updated')
+keys = person.keys()
+print(keys)
+person.update({'salary': '$350000'})
+print('\nAfter dictionary is updated')
+print(keys)
+
+Dictionary values()
+The values() method returns a view object that displays a list of all the values in the dictionary.
+
+Syntax:
+dictionary.values()
+
+Example:
+books = { 'BigData': 5, 'Hadoop': 6, 'Data Science': 4 }
+print(books.values())
+
+Example:
+books = { 'BigData': 5, 'Hadoop': 6, 'Data Science': 4 }
+print(books.values())
+print('Original items:', books)
+del[books['BigData']]
+print('Updated items:', books)
+print(books.values())
+
+Example:
+PyDict1={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+PyDict2={'d':"Machine Learning",'e':"Deep Learning",'f':"Artificial Intelligence"}
+print(PyDict1.values())#dict_values(['BigData', 'Data Science', 'PTYHON'])
+print(PyDict2.values())#dict_values(['Machine Learning', 'Deep Learning', 'Artificial Intelligence'])
+
+Dictionary pop()
+It removes and returns an element from a dictionary having the given key.
+
+Syntax
+dictionary.pop(key)
+
+pop() Parameters
+key - key which is to be searched for removal
+
+Example:
+books = { 'BigData': 2, 'Hadoop': 3, 'Data Science': 4 }
+element = books.pop('BigData')
+print('The popped element is:', element)
+print('The dictionary is:', books)
+
+Example:
+PyDict1={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+PyDict2={'d':"Machine Learning",'e':"Deep Learning",'f':"Artificial Intelligence"}
+print(PyDict1.pop('a'))#BigData
+print(PyDict2.pop('f'))#Artificial Intelligence
+
+Example:
+books = { 'BigData': 2, 'Hadoop': 3, 'Data Science': 4 }
+element = books.pop('Spark')
+#Key Error
+
+Dictionary popitem()
+It returns and removes an arbitrary element (key, value) pair from the dictionary.
+
+Syntax:
+dict.popitem()
+
+Example:
+person = {'name': 'NareshIT', 'age': 15, 'salary': '$35000.0'}
+result = person.popitem()
+print('person = ',person)
+print('Return Value = ',result)
+
+Example:
+PyDict1={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+PyDict2={'d':"Machine Learning",'e':"Deep Learning",'f':"Artificial Intelligence"}
+print(PyDict1.popitem())#('c', 'PTYHON')
+print(PyDict2.popitem())#('f','Artificial Intelligence')
+
+Other Dictionary Operations (Dictionary Membership Test)
+We can test if a key is in a dictionary or not using the keyword in. Notice that membership test is for keys only, not for values.
+
+Example:
+squares = {1: 1, 3: 9, 5: 25, 7: 49, 9: 81}
+print(1 in squares)
+print(2 not in squares)
+print(49 in squares)
+
+Example:
+PyDict1={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+PyDict2={'d':"Machine Learning",'e':"Deep Learning",'f':"Artificial Intelligence"}
+print('a' in PyDict1)#True
+print('A' not in PyDict1)#True
+print('F' in PyDict2)#False
+
+
+Built-in Functions with Dictionary
+Function	Description
+all()	Return True if all keys of the dictionary are true (or if the dictionary is empty).
+any()	Return True if any key of the dictionary is true. If the dictionary is empty, return False.
+len()	Return the length (the number of items) in the dictionary.
+sorted()	Return a new sorted list of keys in the dictionary.
+
+len()
+It returns the number of items (length) of an object.
+
+Syntax:
+len(s)
+
+Example:
+fruits = {"mango": 2, "orange": 6}  
+print("Length:", len(fruits))  
+
+Python sorted()
+The sorted() method sorts the elements of a given iterable in a specific order - Ascending or Descending.
+
+Syntax
+sorted(iterable[, reverse])
+
+Example:
+pyDict = {'e': 1, 'a': 2, 'u': 3, 'o': 4, 'i': 5}
+print(sorted(pyDict))
+print(sorted(pyDict,reverse=True))
+
+# How to merge two dictionaries
+x = {'a': 1, 'b': 2}
+y = {'b': 3, 'c': 4}
+z = {**x, **y}
+print(z)
+
+Example:
+PyDict1={'a':"BigData",'b':"Data Science",'c':"PTYHON"}
+PyDict2={'a':"Machine Learning",'b':"Deep Learning",'c':"Artificial Intelligence"}
+PyDict3={**PyDict1,**PyDict2}
+print(PyDict3)#{'a': 'Machine Learning', 'b': 'Deep Learning', 'c': 'Artificial Intelligence'}
+
+Dictionary Comprehension:
+Comprehension concept applicable for dictionaries also.
+
+Example:
+squares={x:x*x for x in range(1,6)}
+print(squares)#{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+doubles={x:2*x for x in range(1,6)}
+print(doubles)#{1: 2, 2: 4, 3: 6, 4: 8, 5: 10}
+
+Advance Python
+
+﻿WORKING WITH PYTHON FUNCTIONS:
+
+Function means Code Reusability.It performs a specific task
+OR
+A function is a block of organized, reusable code. Functions provide better modularity (high degree of code reusing)
+
+Types of Functions
+Basically functions are two types:
+
+Built-in functions:
+Functions that are built into Python like:
+all(), any(), bin(), bool(), bytes(), callable(), chr(), print(), file(),len(), input()...etc.!
+
+User-defined functions (Building our Own Functions)
+Functions defined by the users themselves as per client or business requirements..!!
+
+Simple rules to define a function in Python:
+1 Function blocks begin with the keyword 'def', the function name & parentheses ( ).
+2 Any input parameters or arguments should be placed within these parentheses. 
+3 The first statement of a function can be an optional statement, It is docstring.
+4 The code block within every function starts with a colon (:) and is indented.
+5 A return statement with no arguments is the same as return None.
+
+SYNTAX:
+def Function_Name( argument1, argument2,....,argumentN):
+Statement1
+Statement2
+return [expression]
+
+Example:
+#Definition of the function
+#Name of the function
+def MyMsgs_Shows():#Indentation of the function (right)
+    #Body of the function
+    #Logical part of the function
+    #Called Part of the function
+    #Argument declaration section
+    print("Hey Welcome to Functions")
+    print('Good One')
+    #End of the function
+    #Always Optional
+    #It is the statement
+    return()
+#Calling Part
+#Passing Parameters
+#Passed values are parameters
+#Code recalling/Reusable
+MyMsgs_Shows()
+MyMsgs_Shows()
+
+Example:
+def MyMsgs_Shows():
+    print("Hey Welcome to Functions")
+    print('Good One')
+    return()
+MyMsgs_Shows()
+
+The Return statement in function
+It is used to return a value from a function, return statement without an expression argument returns none. 
+
+Syntax:
+def function_name(argument1, argument2, ...) :
+    statement_1 
+    statement_2
+    ....
+    return expression
+function_name(arg1, arg2)
+
+Example:
+def Sum( arg1, arg2 ):
+   total = arg1 + arg2
+   print("The Total is:",total)
+   return;
+total = Sum(30,20);
+
+Example:
+def Tot_Sub(a,b):
+    Tot=a+b
+    Sub=a-b
+    return(Tot,Sub)
+x,y=Tot_Sub(10,20)
+print("The Sum is :",x)
+print("The Subtraction is :",y)
+
+Example:
+def Input():
+    x=input("Enter Any Number: ")
+    y=input("Enter Any Number: ")
+    z=int(x)+int(y);
+    print(z)
+    return()
+Input()
+
+Various Forms of Function Arguments
+You can call a function by using the following types of formal arguments:
+1 Required Arguments or Positional Arguments
+2 Keyword Arguments
+3 Default Arguments
+4 Variable-Length/Arbitary Arguments
+
+Positional Arguments
+Arguments passed should match the function parameter from  left to right
+
+Syntax:
+def FunName(arg1,arg2):
+     SuiteOfTheFunction
+
+Example:
+def fun(a,b,c):
+  print(a,b,c)
+fun(1,2,3)
+
+Example:
+def printMy( str ):
+    print(str)
+    return;
+printMy()
+
+NOTE:
+TypeError: printMy() missing 1 required positional argument: 'str'
+
+
+day 25 
+
+
+﻿Keyword Arguments(Parameters)
+We  can call a function  by specifying the keyword argument in the form argument name= value
+
+Syntax:
+def FunctionName(arg1,arg2,arg3):
+      SuiteOfStatements
+
+Example:
+def fun(a,b,c):
+  print(a,b,c)
+fun(c=3,b=2,a=1)
+
+Example:
+def printMy(str):
+    print(str)
+    return;
+printMy(str = "RoboticProcessAutomation-RPA")
+
+Example:
+def printinfo( name, exp ):
+    print("Name: ", name)
+    print("Experience: ", exp)
+    return;
+printinfo( exp='15+Yrs', name="KSRaju" )
+
+Example:
+def nsquare(x, y = 2):  
+    return (x*x+y*y)  
+print("The square of the sum of 2 and 3 is : ", nsquare(2))  
+print("The square of the sum of 2 and 3 is : ", nsquare(2,4))
+
+Default Argument Values
+We can assign default value for arguments to receive if the call passes too few values
+OR
+A default value can be written in the format "argument1 = value", therefore we will have the option to declare or not declare a value for those arguments.
+
+Syntax:
+def Default_Args(arg=value,arg=value):
+      Suite of Statements
+
+Example:
+def fun(a,b=2,c=3):
+  print(a,b,c)
+fun(1)
+
+Example:
+def printinfo( name, exp = '15+' ):
+    print("Name: ", name)
+    print("Experience: ", exp)
+    return;
+printinfo( exp=14, name="KSRaju" )
+printinfo( name="NareshIT" )
+
+Example:
+def Scores(BigData,Hadoop=85,Spark=80):  
+    print(BigData,Hadoop,Spark)  
+Scores(71,77)  
+Scores(65,Spark=74)  
+Scores(BigData=70,Hadoop=90,Spark=75) 
+
+Arbitrary Argument lists  or Variable-length arguments
+Add an arbitary argument in the function definition  start the variable name with  * 
+
+Syntax:
+def functionname([formal_args,] *var_args_tuple ):
+  "doc_string"
+   function_suite
+   return [expression]
+
+Example:
+def fun(*arr):
+  for val in arr:
+    print(val)
+fun(1,2,3,4)
+
+Example:
+def fun1(*var):
+   for x in var:
+      print(x)
+fun( 70, 60, 50 )
+
+Scope and Lifetime of variables
+All variables in a program may not be accessible at all locations in that program. This depends on where you have declared a variable.
+
+Local Variables
+1 The variables  defined within the function  has a local scope and hence they  are called local variables
+2 Local scope means they can be accessed within the function only
+
+Global variables
+1 The variables defined outside the function has a global  scope  and hence they are called global variables
+2 Global scope means they can be accessed within the function  as well as outside  the function
+3 The value of a global  variable  can be used by referring the variable as global inside a function
+
+Example:
+total = 0; #Global Variable
+def sum( arg1, arg2 ):
+    total = arg1 + arg2; # Here total is local variable.
+    print("Inside the function local total : ", total)
+    return total;
+sum( 10, 40 );
+print("Outside the function global total : ", total)
+
+Example:
+x=40#Global Scope
+print(id(x))
+def Scope_Variables1():
+    x=200#Local Scope
+    print(id(x))
+    print(x+x)#Local+Local
+    return
+Scope_Variables1()
+def Scope_Variables2():
+    z=600#Local SCope
+    print(id(z))
+    print(x+z)#Global+Local
+    return
+Scope_Variables2()
+
+global
+It is used to declare that a variable inside the function is global (outside the function). If we need to read the value of a global variable, it is not necessary to define it as global. If we need to modify the value of a global variable inside a function, then we must declare it with global. 
+
+Example:
+x=100
+def MyFun():
+    global x
+    x=5
+    y=20
+    print(x+y)
+def MyFun1():
+    y=10
+    print(x+y)
+MyFun()
+MyFun1()
+
+Example:Output of the following Script..!!
+x=1
+def Compute():
+    global x
+    for i in (1,2,3):
+        x+=1
+Compute()
+print(x)
+
+Example: Output of the following Script..!!
+def f():pass
+print(type(f()))
+
+Function Aliasing:
+For the existing function we can give other name, which is nothing but function aliasing.
+
+Example:
+def Hello_World(name):
+    print("Great:",name)
+MyWorld=Hello_World
+Hello_World('Machine Learning')
+MyWorld("PYTHON")
+print(id(MyWorld))
+print(id(Hello_World))
+
+NOTE:
+If we delete one name still we can access that function by using Alias Name
+
+Example:
+def Hello_World(name):
+    print("Good Morning:",name)
+MyWorld=Hello_World
+Hello_World('Machine Learning')
+del Hello_World
+MyWorld("PYTHON")
+
+NOTE:
+Fun_One = Outer _Fun ==> It is Function Aliasing.
+Fun_One = Outer_Fun() ==> It is calling Outer_Fun() Function
+
+Function is an object:
+In Python every thing is an object. Functions are also objects.
+
+Example:
+def MyFun():
+    print("Say Hey PYTHON")
+print(MyFun)
+print(id(MyFun))
+
+Nested Functions or Inner Functions:
+Functions can be defined within the scope of another function. 
+
+Example:
+def Outer(): #outer function
+    print ("Hello Welcome TO")
+    def Inner(): #inner function
+        print ("Nested Functions")
+    Inner()
+Outer()
+
+Example:
+def Outer_Fun():
+    print("Say Hey Outer Function")
+def Inner_Fun():
+    print("Bye Hey Inner Function")
+print("OuterOneCallingInnerFunction")
+Inner_Fun()
+Outer_Fun()
+
+Example:
+def Outer_Fun():
+    print("Hey Outer")
+    def inner():
+        print("Bye Inner")
+    print("Outer Returns Inner")
+    return inner
+Outer_Fun()
+
+Example:
+def Outer_Fun():
+    print("Hey Outer")
+    def inner():
+        print("Bye Inner")
+    print("Outer Returns Inner")
+    return inner
+Inn=Outer_Fun()
+Inn()
+
+Example:
+def Outer(): #outer function
+    x = 1 #variable defined in Outer function
+    def Inner(a): #inner function
+        print (a+x) #able to acces the variable of outer function
+    Inner(2)
+Outer()
+
+Example:
+def Outer(): #outer function
+    x = 1 # variable defined in the outer function
+    def Inner(a): #inner function
+       #will create a new variable in the inner function
+       #instead of changing the value of x of outer function
+        x = 4
+        print (a+x)
+    print (x) # prints the value of x of outer function
+    Inner(2)
+Outer()
+
+nonlocal
+It is used to declare that a variable inside a nested function is not local to it. If we need to modify the value of a non-local variable inside a nested function, then we must declare it with nonlocal. 
+
+Example:
+def Outer_Function():
+    a = 5
+    def Inner_Function():
+        nonlocal a
+        a = 10
+        print("Inner Function: ",a)
+    Inner_Function()
+    print("Outer Function: ",a)
+Outer_Function()
+
+Example:
+def Outer_Function():
+    a = 5
+    def Inner_Function():
+        a = 10
+        print("Inner Function: ",a)
+    Inner_Function()
+    print("Outer Function: ",a)
+Outer_Function()
+
+PYTHON Recursive Functions:
+A function calls itself one or more times in its body.
+OR
+If a function calls itself is called as recursive function
+
+Example:
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5))
+
+
+day 26 
+
+
+﻿Anonymous Functions (Not identified by name or Unknown name)
+It has the following alias Names:
+1 Lambda functions 
+2 Lambda Forms
+3 One Line function
+4 Implict functions
+5 Simple functions
+6 Throw-away functions
+7 Short period functions
+.................................!!
+It is a function that is defined without a name. No def and return keywords..!!
+
+Syntax
+lambda [arg1 [,arg2,.....argn]]:expression
+
+Example:
+n=lambda x:2*x
+n ==> It is a variable or identifier
+lambda ==> It is a keyword
+x ==> Argument
+: ==> Delimiter
+2*x ==> It is an Expression
+
+Example:
+def add(x,y):
+    return(x+y)
+add(1,2)
+
+Example:
+add=lambda x,y:x+y
+add(4,3)
+
+Example
+g=lambda x:x*x
+print(g(5))
+
+Example:
+def average(x, y):  
+    return (x + y)/2  
+print(average(4, 3))  
+
+Example:
+print((lambda x, y: (x + y)/2)(4, 3))  
+
+Example:
+def max(x,y):
+    if x>y:
+        return x
+    else:
+        return y
+print(max(15,6))
+
+Example:
+max=lambda x,y: x if x>y else y
+print(max(5,6))
+
+Example:
+max=lambda x,y: x if x<y else y
+print(max(5,6))
+
+Lambda functions:
+These areas follows:
+1 map()	2 filter()	3 reduce()
+
+We can pass function as argument to another function
+Example: 
+map(function,sequence) 
+filter(function,sequence) 
+reduce(function,sequence)
+
+map() function 
+Apply same function to each element of a sequence and return the modified list.
+
+Syntax:
+list=[m,n,p]
+function(),f      ==> MAP  ==> New list,[f(m),f(n),f(p)]
+
+Example:
+n=[4,3,2,1]
+print(list(map(lambda x:x**2,n)))
+
+Example:
+my_list = [1, 5, 4, 6, 8]
+new_list = list(map(lambda x: x * 2 , my_list))
+print(new_list)
+
+Example:
+num=[1.1,2.3,4.5]
+Result=list(map(lambda x :int(x),num))
+print(Result)
+
+filter() function: filter items out of a sequence, return filtered list 
+
+Syntax:
+list,[m,n,p]
+condition,c() ==> filter ==> New list [m,n]
+                           if(m==condition)
+
+Example:
+n=[4,3,2,1]
+print(list(filter(lambda x:x>2,n)))
+
+Example:
+my_list = [1, 2, 3, 5, 6, 8,10, 12,15]
+Even_list = list(filter(lambda x: (x%2 == 0),my_list))
+print(Even_list)
+Odd_list = list(filter(lambda x: (x%2 != 0),my_list))
+print(Odd_list)
+
+Example: WithOut Lambda
+def Even_Number(x):
+    if x%2!=0:
+        return True
+    else:
+        return False
+PyList=[1,2,3,4,5,6,7,8,9,10]
+PyList1=list(filter(Even_Number,PyList))
+print(PyList1)
+
+reduce() function:
+1. Applies same operation to items of a sequence
+2. Uses result of operation as first param of next operation 
+3. Returns an item, not a list, This function is defined in “functools” module.
+
+Syntax:
+list,[m,n,p]
+function f() ==> reduce() ==> f(f(m,n),p)
+
+Example:
+import functools
+n=[4,3,2,1]
+print(functools.reduce(lambda x,y:x*y,n))
+
+Example:
+import functools
+print(functools.reduce(lambda x,y:x+y,[1,2,3,4]))
+result=sum([x for x in [1,2,3,4]])
+print(result)
+
+What is a Docstring?
+Python documentation strings (or docstrings) provide a convenient way of associating documentation with Python modules, functions, classes, and methods. You can access string literals by __doc__ (notice the double underscores) attribute of the object.
+
+Docstring Conventions :
+1 String literal must be enclosed with a triple quote.
+2The first line may briefly describe the object's purpose. The line should begin with a capital letter and ends with a dot.
+3 If a documentation string is a multi-line string then the second line should be blank followed by any detailed explanation starting from the third line.
+
+Syntax:
+def my_function():
+    """Do nothing, but document it.
+
+    No, really, it doesn't do anything.
+    """
+    pass
