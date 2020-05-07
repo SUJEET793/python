@@ -40,5 +40,12 @@ employee1.salary=300
 print(employee.__dict__)#{'eno': 1, 'ename': 'sujeet', 'eid': 1, 'designation': 'MANAGER', 'salary': 100}
 print(employee1.__dict__) #{'eno': 2, 'ename': 'rajesh', 'eid': 3, 'designation': 'CEO', 'salary': 300}
 print(employee2.__dict__)#{'eno': 3, 'ename': 'Anjali', 'eid': 4, 'designation': 'labour', 'salary': 200}
+print("")
 
+# creating a new instance variable
+employee3=Employee(3,"Hari",5)
+
+print(employee3.__dict__)
+
+# deleting the instance variable
 
